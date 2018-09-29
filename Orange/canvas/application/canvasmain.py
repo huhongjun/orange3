@@ -273,6 +273,12 @@ class CanvasMainWindow(QMainWindow):
         self.dock_help = canvas_tool_dock.help
         self.dock_help.setMaximumHeight(150)
         self.dock_help.document().setDefaultStyleSheet("h3, a {color: orange;}")
+        default_help = "Select a widget to show its description." \
+                       "<br><br>" \
+                       "See <a href='orange://examples'>workflow examples</a>, " \
+                       "<a href='orange://tutorials'>YouTube tutorials</a>, " \
+                       "or open the <a href='orange://welcome'>welcome screen</a>."
+        self.dock_help.setDefaultText(default_help)
 
         self.dock_help_action = canvas_tool_dock.toogleQuickHelpAction()
         self.dock_help_action.setText(self.tr("Show Help"))
@@ -428,7 +434,7 @@ class CanvasMainWindow(QMainWindow):
                     )
 
         self.save_as_action = \
-            QAction(self.tr("宝尊为..."), self,
+            QAction(self.tr("保存为..."), self,
                     objectName="action-save-as",
                     toolTip=self.tr("Save current workflow as."),
                     triggered=self.save_scheme_as,
@@ -460,7 +466,7 @@ class CanvasMainWindow(QMainWindow):
                     )
 
         self.tutorials_action = \
-            QAction(self.tr("指南"), self,
+            QAction(self.tr("油管指南"), self,
                     objectName="tutorials-action",
                     toolTip=self.tr("View YouTube tutorials."),
                     triggered=self.tutorials,
@@ -468,7 +474,7 @@ class CanvasMainWindow(QMainWindow):
                     )
 
         self.examples_action = \
-            QAction(self.tr("样例"), self,
+            QAction(self.tr("工作流样例"), self,
                     objectName="tutorial-action",
                     toolTip=self.tr("Browse example workflows."),
                     triggered=self.tutorial_scheme,
@@ -1531,12 +1537,13 @@ class CanvasMainWindow(QMainWindow):
                     )
 
         examples_action = \
-            QAction(self.examples_action.text(), dialog,
-                    icon=self.examples_action.icon(),
-                    toolTip=self.examples_action.toolTip(),
-                    whatsThis=self.examples_action.whatsThis(),
-                    triggered=open_examples,
+            QAction(self.tr("Examples"), self,
+                    icon=canvas_icons("Examples.svg"),
+                    toolTip=self.tr("Browse example workflows."),
+                    objectName="tutorial-action",
+                    triggered=open_examples
                     )
+
         tutorials_action = \
             QAction(self.tr("Tutorials"), self,
                     objectName="tutorials-action",
@@ -1922,16 +1929,22 @@ class CanvasMainWindow(QMainWindow):
             if url.scheme() == "help" and url.authority() == "search":
                 try:
                     url = self.help.search(url)
+                    self.show_help(url)
                 except KeyError:
-                    url = None
                     log.info("No help topic found for %r", url)
-
-            if url:
-                self.show_help(url)
-            else:
-                message_information(
-                    self.tr("There is no documentation for this widget yet."),
-                    parent=self)
+                    message_information(
+                        self.tr("There is no documentation for this widget yet."),
+                        parent=self)
+            elif url.scheme() == "orange":
+                target = url.host()
+                if target == "examples":
+                    self.tutorial_scheme()
+                elif target == "tutorials":
+                    self.tutorials()
+                elif target == "welcome":
+                    self.welcome_dialog()
+                else:
+                    log.error("No target found for %r", url)
 
             return True
 
