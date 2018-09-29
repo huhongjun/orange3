@@ -38,7 +38,7 @@ def init():
     version = ".".join(version.split(".", 2)[:2])
 
     QCoreApplication.setOrganizationDomain("biolab.si")
-    QCoreApplication.setApplicationName("Orange Canvas")
+    QCoreApplication.setApplicationName("Orange数据挖掘 3.16")
     QCoreApplication.setApplicationVersion(version)
     QSettings.setDefaultFormat(QSettings.IniFormat)
 

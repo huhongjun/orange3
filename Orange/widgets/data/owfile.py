@@ -70,10 +70,10 @@ class LineEditSelectOnFocus(QLineEdit):
 
 
 class OWFile(widget.OWWidget, RecentPathsWComboMixin):
-    name = "File"
+    name = "文件"
     id = "orange.widgets.data.file"
-    description = "Read data from an input file or network " \
-                  "and send a data table to the output."
+    description = "从输入文件或网络加载数据并且" \
+                  "发送一个数据表到输出端口。"
     icon = "icons/File.svg"
     priority = 10
     category = "Data"
