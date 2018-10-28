@@ -10,7 +10,7 @@ from Orange.widgets.widget import Input, Output
 
 
 class OWSelectByDataIndex(widget.OWWidget):
-    name = "Select by Data Index"
+    name = "索引选择"
     description = "Match instances by index from data subset."
     icon = "icons/SelectByDataIndex.svg"
     priority = 1112

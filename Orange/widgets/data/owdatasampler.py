@@ -16,9 +16,8 @@ from Orange.util import Reprable
 
 
 class OWDataSampler(OWWidget):
-    name = "Data Sampler"
-    description = "Randomly draw a subset of data points " \
-                  "from the input dataset."
+    name = "数据采样"
+    description = "随机选取输入数据集的子集."
     icon = "icons/DataSampler.svg"
     priority = 100
     category = "Data"

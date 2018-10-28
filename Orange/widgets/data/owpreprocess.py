@@ -951,7 +951,7 @@ PREPROCESS_ACTIONS = [
 
 
 class OWPreprocess(widget.OWWidget):
-    name = "Preprocess"
+    name = "预处理"
     description = "Construct a data preprocessing pipeline."
     icon = "icons/Preprocess.svg"
     priority = 2105

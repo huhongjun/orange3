@@ -37,8 +37,8 @@ def init():
     # Use only major.minor
     version = ".".join(version.split(".", 2)[:2])
 
-    QCoreApplication.setOrganizationDomain("biolab.si")
-    QCoreApplication.setApplicationName("Orange数据挖掘 3.16")
+    QCoreApplication.setOrganizationDomain("正行软件")
+    QCoreApplication.setApplicationName("Orange数据挖掘 V3.16")
     QCoreApplication.setApplicationVersion(version)
     QSettings.setDefaultFormat(QSettings.IniFormat)
 
@@ -52,7 +52,7 @@ rc = {}
 
 spec = \
     [("startup/show-splash-screen", bool, True,
-      "Show splash screen at startup"),
+      "启动时显示闪屏"),
 
      ("startup/show-welcome-screen", bool, True,
       "Show Welcome screen at startup"),

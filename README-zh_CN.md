@@ -48,7 +48,7 @@ it in a development environment, run:
     pip install -r requirements-sql.txt   # To use SQL support
     pip install -r requirements-opt.txt   # Optional dependencies, may fail
 
-    # Finally install Orange in editable/development mode.
+    # 最后一开发模式安装Orange
     pip install -e .
 
 Installation of SciPy and qt-graph-helpers is sometimes challenging because of
@@ -75,26 +75,20 @@ This will enable access to the latest Orange release. Then install Orange3:
 
 [Anaconda]: https://www.continuum.io/downloads
 
-Starting Orange GUI
+启动Orange图形化界面
 -------------------
 
-Orange GUI requires PyQt, which is not pip-installable in Python 3. You
-have to download and install it system-wide. Make sure that the virtual
-environment for orange is created with `--system-site-packages`, so it will
-have access to the installed PyQt4.
+Orange图形化界面需要PyQt
 
-To start Orange GUI from the command line, assuming it was successfully
-installed, run:
-
+从命令行启动Orange图形化界面，运行：
     orange-canvas
-    # or
-    python3 -m Orange.canvas
+    # 或
+    python -m Orange.canvas
 
-Append `--help` for a list of program options.
+后面附加 `--help` 可查看启动选项列表。
 
-If you're running Orange with PyQt5 or if you have multiple PyQt versions
-available, set the environmental variable `QT_API` to the PyQt version to use,
-e.g.:
+如果你是在PyQt5上运行Orange，或者安装了多个PyQT版本，设置环境变量QT_API为指定的PyQT版本，
+如：
 
     export QT_API=pyqt5
     orange-canvas

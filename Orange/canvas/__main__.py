@@ -281,6 +281,7 @@ def main(argv=None):
     stream_hander.setLevel(level=levels[options.log_level])
     rootlogger.addHandler(stream_hander)
 
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     log.info("Starting 'Orange Canvas' application.")
 
     qt_argv = argv[:1]

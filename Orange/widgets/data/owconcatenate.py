@@ -23,7 +23,7 @@ from Orange.widgets.widget import Input, Output
 
 
 class OWConcatenate(widget.OWWidget):
-    name = "Concatenate"
+    name = "数据合并"
     description = "Concatenate (append) two or more datasets."
     priority = 1111
     icon = "icons/Concatenate.svg"

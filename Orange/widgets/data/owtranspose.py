@@ -8,7 +8,7 @@ from Orange.widgets.widget import Input, Output
 
 
 class OWTranspose(OWWidget):
-    name = "Transpose"
+    name = "行列转置"
     description = "Transpose data table."
     icon = "icons/Transpose.svg"
     priority = 2000

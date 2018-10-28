@@ -281,7 +281,7 @@ class CanvasMainWindow(QMainWindow):
         self.dock_help.setDefaultText(default_help)
 
         self.dock_help_action = canvas_tool_dock.toogleQuickHelpAction()
-        self.dock_help_action.setText(self.tr("Show Help"))
+        self.dock_help_action.setText(self.tr("显示帮助信息"))
         self.dock_help_action.setIcon(canvas_icons("Info.svg"))
 
         self.canvas_tool_dock = canvas_tool_dock
@@ -523,7 +523,7 @@ class CanvasMainWindow(QMainWindow):
         self.show_properties_action = \
             QAction(self.tr("工作流信息"), self,
                     objectName="show-properties-action",
-                    toolTip=self.tr("Show workflow properties."),
+                    toolTip=self.tr("显示工作流属性."),
                     triggered=self.show_scheme_properties,
                     shortcut=QKeySequence(Qt.ControlModifier | Qt.Key_I),
                     icon=canvas_icons("Document Info.svg")
@@ -591,7 +591,7 @@ class CanvasMainWindow(QMainWindow):
             QAction(self.tr("Freeze"), self,
                     objectName="signal-freeze-action",
                     checkable=True,
-                    toolTip=self.tr("Freeze signal propagation."),
+                    toolTip=self.tr("暂停信号传播."),
                     toggled=self.set_signal_freeze,
                     icon=canvas_icons("Pause.svg")
                     )

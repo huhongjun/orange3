@@ -2,7 +2,7 @@ NAME = "Data"
 
 ID = "orange.widgets.data"
 
-DESCRIPTION = """Widgets for data manipulation."""
+DESCRIPTION = """数据处理组件."""
 
 LONG_DESRIPTION = """
 This category contains widgets for data manipulation. This includes

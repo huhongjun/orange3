@@ -98,7 +98,7 @@ class VariablesListItemModel(VariableListModel):
 
 class OWSelectAttributes(widget.OWWidget):
     # pylint: disable=too-many-instance-attributes
-    name = "Select Columns"
+    name = "列选择"
     description = "Select columns from the data table and assign them to " \
                   "data features, classes or meta variables."
     icon = "icons/SelectColumns.svg"
