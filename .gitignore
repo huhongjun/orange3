@@ -27,3 +27,4 @@ Thumbs.db
 # PyLint, Coverage reports
 .pylint_cache/*
 htmlcov/*
+.ipynb_checkpoints

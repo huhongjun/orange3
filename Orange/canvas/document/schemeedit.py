@@ -183,14 +183,14 @@ class SchemeEditWidget(QWidget):
         self.__cleanUpAction = \
             QAction(self.tr("Clean Up"), self,
                     objectName="cleanup-action",
-                    toolTip=self.tr("对齐网格."),
+                    toolTip=self.tr("Align widgets to a grid."),
                     triggered=self.alignToGrid,
                     )
 
         self.__newTextAnnotationAction = \
             QAction(self.tr("Text"), self,
                     objectName="new-text-action",
-                    toolTip=self.tr("为工作流添加文本标注."),
+                    toolTip=self.tr("Add a text annotation to the workflow."),
                     checkable=True,
                     toggled=self.__toggleNewTextAnnotation,
                     )
@@ -220,7 +220,7 @@ class SchemeEditWidget(QWidget):
         self.__newArrowAnnotationAction = \
             QAction(self.tr("Arrow"), self,
                     objectName="new-arrow-action",
-                    toolTip=self.tr("为工作流添加箭头标注."),
+                    toolTip=self.tr("Add an arrow annotation to the workflow."),
                     checkable=True,
                     toggled=self.__toggleNewArrowAnnotation,
                     )

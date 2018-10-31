@@ -10,6 +10,7 @@ Orange
 visualization, exploration, preprocessing and modeling techniques. It can be
 used through a nice and intuitive user interface or, for more advanced users,
 as a module for the Python programming language.
+[Orange]是一个组件化的数据挖掘软件。它包括一系列的数据可视化、探查、预处理和建模技术。可以通过友好、只能的图形化界面使用，对于高级用户，也可以作为Python开发的模块。
 
 This is a development version of Orange 3. The stable version 2.7 is still
 available ([binaries] and [sources]).
@@ -19,10 +20,10 @@ available ([binaries] and [sources]).
 [sources]: https://github.com/biolab/orange
 
 
-Installing
+安装
 ----------
-Orange requires Python 3.4 or newer. To build it and install
-it in a development environment, run:
+Orange需要Python 3.4 或更高版本。
+为构建并安装Orange开发环境：
 
     # Install some build requirements via your system's package manager
     sudo apt install virtualenv git build-essential python3-dev

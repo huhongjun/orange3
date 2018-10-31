@@ -1,0 +1,492 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/regression.rst:3
+msgid "Regression (``regression``)"
+msgstr ""
+
+#: ../../source/reference/regression.rst:12
+msgid "Linear Regression"
+msgstr ""
+
+#: ../../source/reference/regression.rst:14
+msgid ""
+"Linear regression is a statistical regression method which tries to "
+"predict a value of a continuous response (class) variable based on the "
+"values of several predictors. The model assumes that the response "
+"variable is a linear combination of the predictors, the task of linear "
+"regression is therefore to fit the unknown coefficients."
+msgstr ""
+
+#: ../../source/reference/regression.rst:22
+#: ../../source/reference/regression.rst:67
+msgid "Example"
+msgstr ""
+
+#: Orange.regression.linear.LinearRegressionLearner:2 of
+msgid ""
+"A wrapper for `sklearn.linear_model.base.LinearRegression`. The following"
+" is its documentation:"
+msgstr ""
+
+#: Orange.regression.linear.LinearRegressionLearner:4 of
+msgid "Ordinary least squares Linear Regression."
+msgstr ""
+
+#: Orange.regression.linear.RidgeRegressionLearner:2 of
+msgid ""
+"A wrapper for `sklearn.linear_model.ridge.Ridge`. The following is its "
+"documentation:"
+msgstr ""
+
+#: Orange.regression.linear.RidgeRegressionLearner:4 of
+msgid "Linear least squares with l2 regularization."
+msgstr ""
+
+#: Orange.regression.linear.RidgeRegressionLearner:6 of
+msgid "Minimizes the objective function::"
+msgstr ""
+
+#: Orange.regression.linear.RidgeRegressionLearner:10 of
+msgid ""
+"This model solves a regression model where the loss function is the "
+"linear least squares function and regularization is given by the l2-norm."
+" Also known as Ridge Regression or Tikhonov regularization. This "
+"estimator has built-in support for multi-variate regression (i.e., when y"
+" is a 2d-array of shape [n_samples, n_targets])."
+msgstr ""
+
+#: Orange.regression.linear.RidgeRegressionLearner:16 of
+msgid "Read more in the :ref:`User Guide <ridge_regression>`."
+msgstr ""
+
+#: Orange.regression.linear.LassoRegressionLearner:2 of
+msgid ""
+"A wrapper for `sklearn.linear_model.coordinate_descent.Lasso`. The "
+"following is its documentation:"
+msgstr ""
+
+#: Orange.regression.linear.LassoRegressionLearner:4 of
+msgid "Linear Model trained with L1 prior as regularizer (aka the Lasso)"
+msgstr ""
+
+#: Orange.regression.linear.LassoRegressionLearner:6 of
+msgid "The optimization objective for Lasso is::"
+msgstr ""
+
+#: Orange.regression.linear.LassoRegressionLearner:10 of
+msgid ""
+"Technically the Lasso model is optimizing the same objective function as "
+"the Elastic Net with ``l1_ratio=1.0`` (no L2 penalty)."
+msgstr ""
+
+#: Orange.regression.linear.LassoRegressionLearner:13 of
+msgid "Read more in the :ref:`User Guide <lasso>`."
+msgstr ""
+
+#: Orange.regression.linear.SGDRegressionLearner:2 of
+msgid ""
+"A wrapper for `sklearn.linear_model.stochastic_gradient.SGDRegressor`. "
+"The following is its documentation:"
+msgstr ""
+
+#: Orange.regression.linear.SGDRegressionLearner:4 of
+msgid "Linear model fitted by minimizing a regularized empirical loss with SGD"
+msgstr ""
+
+#: Orange.regression.linear.SGDRegressionLearner:6 of
+msgid ""
+"SGD stands for Stochastic Gradient Descent: the gradient of the loss is "
+"estimated each sample at a time and the model is updated along the way "
+"with a decreasing strength schedule (aka learning rate)."
+msgstr ""
+
+#: Orange.regression.linear.SGDRegressionLearner:10 of
+msgid ""
+"The regularizer is a penalty added to the loss function that shrinks "
+"model parameters towards the zero vector using either the squared "
+"euclidean norm L2 or the absolute norm L1 or a combination of both "
+"(Elastic Net). If the parameter update crosses the 0.0 value because of "
+"the regularizer, the update is truncated to 0.0 to allow for learning "
+"sparse models and achieve online feature selection."
+msgstr ""
+
+#: Orange.regression.linear.SGDRegressionLearner:17 of
+msgid ""
+"This implementation works with data represented as dense numpy arrays of "
+"floating point values for the features."
+msgstr ""
+
+#: Orange.regression.linear.SGDRegressionLearner:20 of
+msgid "Read more in the :ref:`User Guide <sgd>`."
+msgstr ""
+
+#: ../../source/reference/regression.rst:48
+msgid "Polynomial"
+msgstr ""
+
+#: ../../source/reference/regression.rst:50
+msgid ""
+"*Polynomial model* is a wrapper that constructs polynomial features of a "
+"specified degree and learns a model on them."
+msgstr ""
+
+#: Orange.regression.linear.PolynomialLearner:2 of
+msgid "Generate polynomial features and learn a prediction model"
+msgstr ""
+
+#: Orange.regression.MeanLearner.fit_storage
+#: Orange.regression.SimpleRandomForestLearner Orange.regression.TreeLearner
+#: Orange.regression.linear.PolynomialLearner of
+msgid "Parameters"
+msgstr ""
+
+#: Orange.regression.linear.PolynomialLearner:8 of
+msgid "**learner**"
+msgstr ""
+
+#: Orange.regression.linear.PolynomialLearner:7 of
+msgid "LearnerRegression"
+msgstr ""
+
+#: Orange.regression.linear.PolynomialLearner:8 of
+msgid "learner to be fitted on the transformed features"
+msgstr ""
+
+#: Orange.regression.linear.PolynomialLearner:11 of
+msgid "**degree**"
+msgstr ""
+
+#: Orange.regression.linear.PolynomialLearner:10 of
+msgid "int"
+msgstr ""
+
+#: Orange.regression.linear.PolynomialLearner:11 of
+msgid "degree of used polynomial"
+msgstr ""
+
+#: Orange.regression.linear.PolynomialLearner:26 of
+msgid "**preprocessors**"
+msgstr ""
+
+#: Orange.regression.linear.PolynomialLearner:25 of
+msgid "List[Preprocessor]"
+msgstr ""
+
+#: Orange.regression.linear.PolynomialLearner:14 of
+msgid "preprocessors to be applied on the data before learning"
+msgstr ""
+
+#: ../../source/reference/regression.rst:57
+msgid "Mean"
+msgstr ""
+
+#: ../../source/reference/regression.rst:59
+msgid ""
+"*Mean model* predicts the same value (usually the distribution mean) for "
+"all data instances. Its accuracy can serve as a baseline for other "
+"regression models."
+msgstr ""
+
+#: ../../source/reference/regression.rst:63
+msgid ""
+"The model learner (:class:`MeanLearner`) computes the mean of the given "
+"data or distribution. The model is stored as an instance of "
+":class:`MeanModel`."
+msgstr ""
+
+#: Orange.regression.MeanLearner:2 of
+msgid "Fit a regression model that returns the average response (class) value."
+msgstr ""
+
+#: Orange.regression.MeanLearner.fit_storage:2 of
+msgid ""
+"Construct a :obj:`MeanModel` by computing the mean value of the given "
+"data."
+msgstr ""
+
+#: Orange.regression.MeanLearner.fit_storage:5 of
+msgid "data table"
+msgstr ""
+
+#: Orange.regression.MeanLearner.fit_storage Orange.regression.TreeLearner of
+msgid "Returns"
+msgstr ""
+
+#: Orange.regression.MeanLearner.fit_storage:7 of
+msgid "regression model, which always returns mean value"
+msgstr ""
+
+#: Orange.regression.MeanLearner.fit_storage of
+msgid "Return type"
+msgstr ""
+
+#: Orange.regression.MeanLearner.fit_storage:8 of
+msgid ":obj:`MeanModel`"
+msgstr ""
+
+#: ../../source/reference/regression.rst:88
+msgid "Random Forest"
+msgstr ""
+
+#: Orange.regression.RandomForestRegressionLearner:2 of
+msgid ""
+"A wrapper for `sklearn.ensemble.forest.RandomForestRegressor`. The "
+"following is its documentation:"
+msgstr ""
+
+#: Orange.regression.RandomForestRegressionLearner:4 of
+msgid "A random forest regressor."
+msgstr ""
+
+#: Orange.regression.RandomForestRegressionLearner:6 of
+msgid ""
+"A random forest is a meta estimator that fits a number of classifying "
+"decision trees on various sub-samples of the dataset and uses averaging "
+"to improve the predictive accuracy and control over-fitting. The sub-"
+"sample size is always the same as the original input sample size but the "
+"samples are drawn with replacement if `bootstrap=True` (default)."
+msgstr ""
+
+#: Orange.regression.RandomForestRegressionLearner:13 of
+msgid "Read more in the :ref:`User Guide <forest>`."
+msgstr ""
+
+#: ../../source/reference/regression.rst:98
+msgid "Simple Random Forest"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:2 of
+msgid ""
+"A random forest regressor, optimized for speed. Trees in the forest are "
+"constructed with :obj:`SimpleTreeLearner` classification trees."
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:9 of
+msgid "**n_estimators**"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:8 of
+msgid "int, optional (default = 10)"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:9 of
+msgid "Number of trees in the forest."
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:14 of
+msgid "**min_instances**"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:13 of
+msgid "int, optional (default = 2)"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:12 of
+msgid ""
+"Minimal number of data instances in leaves. When growing the three, new "
+"nodes are not introduced if they would result in leaves with fewer "
+"instances than min_instances. Instance count is weighed."
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:17
+#: Orange.regression.TreeLearner:29 of
+msgid "**max_depth**"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:16 of
+msgid "int, optional (default = 1024)"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:17 of
+msgid "Maximal depth of tree."
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:21 of
+msgid "**max_majority**"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:20 of
+msgid "float, optional (default = 1.0)"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:20 of
+msgid ""
+"Maximal proportion of majority class. When this is exceeded, induction "
+"stops (only used for classification)."
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:28 of
+msgid "**skip_prob**"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:27 of
+msgid "string, optional (default = \"sqrt\")"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:24 of
+msgid "Data attribute will be skipped with probability ``skip_prob``."
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:26 of
+msgid "if float, then skip attribute with this probability."
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:27 of
+msgid "if \"sqrt\", then `skip_prob = 1 - sqrt(n_features) / n_features`"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:28 of
+msgid "if \"log2\", then `skip_prob = 1 - log2(n_features) / n_features`"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:43 of
+msgid "**seed**"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:42 of
+msgid "int, optional (default = 42)"
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner:31 of
+msgid "Random seed."
+msgstr ""
+
+#: Orange.regression.SimpleRandomForestLearner.fit_storage:2
+#: Orange.regression.TreeLearner.fit_storage:2 of
+msgid ""
+"Default implementation of fit_storage defaults to calling fit. Derived "
+"classes must define fit_storage or fit"
+msgstr ""
+
+#: ../../source/reference/regression.rst:109
+msgid "Regression Tree"
+msgstr ""
+
+#: ../../source/reference/regression.rst:111
+msgid ""
+"Orange includes two implemenations of regression tres: a home-grown one, "
+"and one from scikit-learn. The former properly handles multinominal and "
+"missing values, and the latter is faster."
+msgstr ""
+
+#: Orange.regression.TreeLearner:2 of
+msgid "Tree inducer with proper handling of nominal attributes and binarization."
+msgstr ""
+
+#: Orange.regression.TreeLearner:4 of
+msgid ""
+"The inducer can handle missing values of attributes and target. For "
+"discrete attributes with more than two possible values, each value can "
+"get a separate branch (`binarize=False`), or values can be grouped into "
+"two groups (`binarize=True`, default)."
+msgstr ""
+
+#: Orange.regression.TreeLearner:9 of
+msgid ""
+"The tree growth can be limited by the required number of instances for "
+"internal nodes and for leafs, and by the maximal depth of the tree."
+msgstr ""
+
+#: Orange.regression.TreeLearner:12 of
+msgid "If the tree is not binary, it can contain zero-branches."
+msgstr ""
+
+#: Orange.regression.TreeLearner:19 of
+msgid "**binarize**"
+msgstr ""
+
+#: Orange.regression.TreeLearner:17 of
+msgid ""
+"if `True` the inducer will find optimal split into two subsets for values"
+" of discrete attributes. If `False` (default), each value gets its "
+"branch."
+msgstr ""
+
+#: Orange.regression.TreeLearner:22 of
+msgid "**min_samples_leaf**"
+msgstr ""
+
+#: Orange.regression.TreeLearner:22 of
+msgid "the minimal number of data instances in a leaf"
+msgstr ""
+
+#: Orange.regression.TreeLearner:26 of
+msgid "**min_samples_split**"
+msgstr ""
+
+#: Orange.regression.TreeLearner:25 of
+msgid "the minimal number of data instances that is split into subgroups"
+msgstr ""
+
+#: Orange.regression.TreeLearner:29 of
+msgid "the maximal depth of the tree"
+msgstr ""
+
+#: Orange.regression.TreeLearner:45 of
+msgid "**instance of OrangeTreeModel**"
+msgstr ""
+
+#: Orange.regression.TreeLearner.build_tree:2 of
+msgid "Induce a tree from the given data"
+msgstr ""
+
+#: Orange.regression.TreeLearner.build_tree:18 of
+msgid "Returns:"
+msgstr ""
+
+#: Orange.regression.TreeLearner.build_tree:5 of
+msgid "root node (Node)"
+msgstr ""
+
+#: Orange.regression.SklTreeRegressionLearner:2 of
+msgid ""
+"A wrapper for `sklearn.tree.tree.DecisionTreeRegressor`. The following is"
+" its documentation:"
+msgstr ""
+
+#: Orange.regression.SklTreeRegressionLearner:4 of
+msgid "A decision tree regressor."
+msgstr ""
+
+#: Orange.regression.SklTreeRegressionLearner:6 of
+msgid "Read more in the :ref:`User Guide <tree>`."
+msgstr ""
+
+#: ../../source/reference/regression.rst:126
+msgid "Neural Network"
+msgstr ""
+
+#: Orange.regression.NNRegressionLearner:2 of
+msgid ""
+"A wrapper for `Orange.regression.neural_network.MLPRegressorWCallback`. "
+"The following is its documentation:"
+msgstr ""
+
+#: Orange.regression.NNRegressionLearner:4 of
+msgid "Multi-layer Perceptron regressor."
+msgstr ""
+
+#: Orange.regression.NNRegressionLearner:6 of
+msgid ""
+"This model optimizes the squared-loss using LBFGS or stochastic gradient "
+"descent."
+msgstr ""
+

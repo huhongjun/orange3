@@ -55,87 +55,86 @@ spec = \
       "启动时显示闪屏"),
 
      ("startup/show-welcome-screen", bool, True,
-      "Show Welcome screen at startup"),
+      "启东市显示欢迎屏幕"),
 
      ("startup/check-updates", bool, True,
-      "Check for updates"),
+      "启动时检查更新"),
 
      ("stylesheet", str, "orange",
-      "QSS stylesheet to use"),
+      "使用QSS样式"),
 
      ("schemeinfo/show-at-new-scheme", bool, True,
-      "Show Workflow Properties when creating a new Workflow"),
+      "创建新工作流时显示工作流属性"),
 
      ("mainwindow/scheme-margins-enabled", bool, False,
-      "Show margins around the workflow view"),
+      "显示工作流视图边框"),
 
      ("mainwindow/show-scheme-shadow", bool, True,
-      "Show shadow around the workflow view"),
+      "显示工作流视图阴影"),
 
      ("mainwindow/toolbox-dock-exclusive", bool, True,
-      "Should the toolbox show only one expanded category at the time"),
+      "工具箱只展开一个目录"),
 
      ("mainwindow/toolbox-dock-floatable", bool, False,
-      "Is the canvas toolbox floatable (detachable from the main window)"),
+      "工具箱是否可浮动"),
 
      ("mainwindow/toolbox-dock-movable", bool, True,
-      "Is the canvas toolbox movable (between left and right edge)"),
+      "工具箱可移动(左侧或右侧靠边)"),
 
      ("mainwindow/toolbox-dock-use-popover-menu", bool, True,
-      "Use a popover menu to select a widget when clicking on a category "
-      "button"),
+      "点击类别按钮时，用悬浮菜单选择组件"),
 
      ("mainwindow/widgets-float-on-top", bool, False,
-      "Float widgets on top of other windows"),
+      "组件可以负载其他窗口上"),
 
      ("mainwindow/number-of-recent-schemes", int, 15,
-      "Number of recent workflows to keep in history"),
+      "历史记录中保留的当前工作流数量"),
 
      ("schemeedit/show-channel-names", bool, True,
-      "Show channel names"),
+      "显示频道名称"),
 
      ("schemeedit/show-link-state", bool, True,
-      "Show link state hints."),
+      "显示链接状态提示信息。"),
 
      ("schemeedit/enable-node-animations", bool, True,
-      "Enable node animations."),
+      "启用节点动画。"),
 
      ("schemeedit/freeze-on-load", bool, False,
-      "Freeze signal propagation when loading a workflow."),
+      "加载工作流时，冻结信号传播。"),
 
      ("quickmenu/trigger-on-double-click", bool, True,
-      "Show quick menu on double click."),
+      "双击显示快捷菜单。"),
 
      ("quickmenu/trigger-on-right-click", bool, True,
-      "Show quick menu on right click."),
+      "右键显示快捷菜单。"),
 
      ("quickmenu/trigger-on-space-key", bool, True,
-      "Show quick menu on space key press."),
+      "空格键显示快捷菜单。"),
 
      ("quickmenu/trigger-on-any-key", bool, False,
-      "Show quick menu on double click."),
+      "按任意键显示快捷菜单。"),
 
-     ("logging/level", int, 1, "Logging level"),
+     ("logging/level", int, 1, "日志级别"),
 
-     ("logging/show-on-error", bool, True, "Show log window on error"),
+     ("logging/show-on-error", bool, True, "出错时显示日志窗口"),
 
-     ("logging/dockable", bool, True, "Allow log window to be docked"),
+     ("logging/dockable", bool, True, "允许日志窗口停靠"),
 
      ("help/open-in-external-browser", bool, False,
-      "Open help in an external browser"),
+      "在外部浏览器打开帮助"),
 
      ("error-reporting/machine-id", str, '',
-     "Report custom name instead of machine ID"),
+     "错误报告采用定制名称而不是机器ID"),
 
      ("add-ons/allow-conda", bool, True,
-      "Install add-ons with conda"),
+      "用conda安装插件"),
 
      ("add-ons/pip-install-arguments", str, '',
-      'Arguments to pass to "pip install" when installing add-ons.'),
+      '安装插件时传给"pip install"的参数。'),
 
-     ("network/http-proxy", str, '', 'HTTP proxy.'),
+     ("network/http-proxy", str, '', 'HTTP代理。'),
 
-     ("network/https-proxy", str, '', 'HTTPS proxy.'),
+     ("network/https-proxy", str, '', 'HTTPS代理。'),
      ]
 
 spec = [config_slot(*t) for t in spec]

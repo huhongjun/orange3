@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/data.filters.rst:5
+msgid "Data Filters (``filter``)"
+msgstr ""
+
+#: ../../source/reference/data.filters.rst:7
+msgid ""
+"Instances of classes derived from `Filter` are used for filtering the "
+"data."
+msgstr ""
+
+#: ../../source/reference/data.filters.rst:9
+msgid ""
+"When called with an individual data instance "
+"(:obj:`Orange.data.Instance`), they accept or reject the instance by "
+"returning either `True` or `False`."
+msgstr ""
+
+#: ../../source/reference/data.filters.rst:12
+msgid ""
+"When called with a data storage (e.g. an instance of "
+":obj:`Orange.data.Table`) they check whether the corresponding class "
+"provides the method that implements the particular filter. If so, the "
+"method is called and the result should be of the same type as the "
+"storage; e.g., filter methods of :obj:`Orange.data.Table` return new "
+"instances of :obj:`Orange.data.Table`, and filter methods of SQL proxies "
+"return new SQL proxies."
+msgstr ""
+
+#: ../../source/reference/data.filters.rst:20
+msgid ""
+"If the class corresponding to the storage does not implement a particular"
+" filter, the fallback computes the indices of the rows to be selected and"
+" returns `data[indices]`."
+msgstr ""
+
+#: Orange.data.filter.IsDefined:2 of
+msgid ""
+"Select the data instances with no undefined values. The check can be "
+"restricted to a subset of columns."
+msgstr ""
+
+#: Orange.data.filter.IsDefined:5 of
+msgid "The filter's behaviour may depend upon the storage implementation."
+msgstr ""
+
+#: Orange.data.filter.IsDefined:7 of
+msgid ""
+"In particular, :obj:`~Orange.data.Table` with sparse matrix "
+"representation will select all data instances whose values are defined, "
+"even if they are zero. However, if individual columns are checked, it "
+"will select all rows with non-zero entries for this columns, disregarding"
+" whether they are stored as zero or omitted."
+msgstr ""
+
+#: Orange.data.filter.IsDefined:15 of
+msgid ""
+"The columns to be checked, given as a sequence of indices, names or "
+":obj:`Orange.data.Variable`."
+msgstr ""
+
+#: Orange.data.filter.HasClass:2 of
+msgid "Return all rows for which the class value is known."
+msgstr ""
+
+#: Orange.data.filter.HasClass:4 of
+msgid ""
+":obj:`Orange.data.Table` implements the filter on the sparse data so that"
+" it returns all rows for which all class values are defined, even if they"
+" equal zero."
+msgstr ""
+
+#: Orange.data.filter.Random:2 of
+msgid "Return a random selection of data instances."
+msgstr ""
+
+#: Orange.data.filter.Random:6 of
+msgid ""
+"The proportion (if below 1) or the probability (if 1 or above) of "
+"selected instances"
+msgstr ""
+
+#: Orange.data.filter.SameValue:2 of
+msgid "Return the data instances with the given value in the specified column."
+msgstr ""
+
+#: Orange.data.filter.SameValue:6 of
+msgid ""
+"The column, described by an index, a string or "
+":obj:`Orange.data.Variable`."
+msgstr ""
+
+#: Orange.data.filter.SameValue:11 of
+msgid "The reference value"
+msgstr ""
+
+#: Orange.data.filter.Values:2 of
+msgid ""
+"Select the data instances based on conjunction or disjunction of filters "
+"derived from :obj:`ValueFilter` that check values of individual features "
+"or another (nested) Values filter."
+msgstr ""
+
+#: Orange.data.filter.Values:8 of
+msgid "A list of conditions, derived from :obj:`ValueFilter` or :obj:`Values`"
+msgstr ""
+
+#: Orange.data.filter.Values:12 of
+msgid "If `True`, the filter computes a conjunction, otherwise a disjunction"
+msgstr ""
+
+#: Orange.data.filter.Values:16 of
+msgid "Revert the selection"
+msgstr ""
+
+#: Orange.data.filter.FilterDiscrete:2 of
+msgid ""
+"Subfilter for discrete variables, which selects the instances whose value"
+" matches one of the given values."
+msgstr ""
+
+#: Orange.data.filter.FilterContinuous:6 Orange.data.filter.FilterDiscrete:7
+#: Orange.data.filter.FilterString:6 Orange.data.filter.FilterStringList:7 of
+msgid ""
+"The column to which the filter applies (int, str or "
+":obj:`Orange.data.Variable`)."
+msgstr ""
+
+#: Orange.data.filter.FilterDiscrete:12 of
+msgid ""
+"The list (or a set) of accepted values. If None, it checks whether the "
+"value is defined."
+msgstr ""
+
+#: Orange.data.filter.FilterContinuous:2 of
+msgid "Subfilter for continuous variables."
+msgstr ""
+
+#: Orange.data.filter.FilterContinuous:11 Orange.data.filter.FilterString:11 of
+msgid ""
+"The reference value; also aliased to `min` for operators `Between` and "
+"`Outside`."
+msgstr ""
+
+#: Orange.data.filter.FilterContinuous:16 Orange.data.filter.FilterString:16 of
+msgid "The upper threshold for operators `Between` and `Outside`."
+msgstr ""
+
+#: Orange.data.filter.FilterContinuous:20 of
+msgid ""
+"The operator; should be `FilterContinuous.Equal`, `NotEqual`, `Less`, "
+"`LessEqual`, `Greater`, `GreaterEqual`, `Between`, `Outside` or "
+"`IsDefined`."
+msgstr ""
+
+#: Orange.data.filter.FilterString:2 of
+msgid "Subfilter for string variables."
+msgstr ""
+
+#: Orange.data.filter.FilterString:20 of
+msgid ""
+"The operator; should be `FilterString.Equal`, `NotEqual`, `Less`, "
+"`LessEqual`, `Greater`, `GreaterEqual`, `Between`, `Outside`, `Contains`,"
+" `StartsWith`, `EndsWith` or `IsDefined`."
+msgstr ""
+
+#: Orange.data.filter.FilterString:26 Orange.data.filter.FilterStringList:16 of
+msgid "Tells whether the comparisons are case sensitive"
+msgstr ""
+
+#: Orange.data.filter.FilterStringList:2 of
+msgid ""
+"Subfilter for strings variables which checks whether the value is in the "
+"given list of accepted values."
+msgstr ""
+
+#: Orange.data.filter.FilterStringList:12 of
+msgid "The list (or a set) of accepted values."
+msgstr ""
+
+#: Orange.data.filter.FilterRegex:2 of
+msgid "Filter that checks whether the values match the regular expression."
+msgstr ""
+

@@ -1,0 +1,600 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/data.variable.rst:5
+msgid "Variable Descriptors (``variable``)"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:7
+msgid ""
+"Every variable is associated with a descriptor that stores its name and "
+"other properties. Descriptors serve three main purposes:"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:10
+msgid ""
+"conversion of values from textual format (e.g. when reading files) to the"
+" internal representation and back (e.g. when writing files or printing "
+"out);"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:14
+msgid ""
+"identification of variables: two variables from different datasets are "
+"considered to be the same if they have the same descriptor;"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:17
+msgid ""
+"conversion of values between domains or datasets, for instance from "
+"continuous to discrete data, using a pre-computed transformation."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:20
+msgid ""
+"Descriptors are most often constructed when loading the data from files. "
+"::"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:35
+msgid ""
+"Some variables are derived from others. For instance, discretizing a "
+"continuous variable gives a new, discrete variable. The new variable can "
+"compute its values from the original one."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:47
+msgid "See `Derived variables`_ for a detailed explanation."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:50
+msgid "Constructors"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:52
+msgid ""
+"Orange maintains lists of existing descriptors for variables. This "
+"facilitates the reuse of descriptors: if two datasets refer to the same "
+"variables, they should be assigned the same descriptors so that, for "
+"instance, a model trained on one dataset can make predictions for the "
+"other."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:57
+msgid ""
+"Variable descriptors are seldom constructed in user scripts. When needed,"
+" this can be done by calling the constructor directly or by calling the "
+"class method `make`. The difference is that the latter returns an "
+"existing descriptor if there is one with the same name and which matches "
+"the other conditions, such as having the prescribed list of discrete "
+"values for :obj:`~Orange.data.DiscreteVariable`::"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:73
+msgid ""
+"The first line returns a new descriptor after not finding an existing "
+"desciptor for a continuous variable named \"age\". The second reuses the "
+"first descriptor. The last creates a new one since the constructor is "
+"invoked directly."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:77
+msgid ""
+"The distinction does not matter in most cases, but it is important when "
+"loading the data from different files. Orange uses the `make` constructor"
+" when loading data."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:82
+msgid "Base class"
+msgstr ""
+
+#: Orange.data.Variable:2 of
+msgid ""
+"The base class for variable descriptors contains the variable's name and "
+"some basic properties."
+msgstr ""
+
+#: Orange.data.Variable:7 of
+msgid "The name of the variable."
+msgstr ""
+
+#: Orange.data.Variable:11 of
+msgid ""
+"A set of values that represent unknowns in conversion from textual "
+"formats. Default is `{\"?\", \".\", \"\", \"NA\", \"~\", None}`."
+msgstr ""
+
+#: Orange.data.Variable:16 of
+msgid ""
+"A function for computing the variable's value when converting from "
+"another domain which does not contain this variable. The function will be"
+" called with a data set (`Orange.data.Table`) and has to return an array "
+"of computed values for all its instances. The base class defines a static"
+" method `compute_value`, which returns `Unknown`. Non-primitive variables"
+" must redefine it to return `None`."
+msgstr ""
+
+#: Orange.data.Variable:25 of
+msgid ""
+"A flag about sparsity of the variable. When set, the variable suggests it"
+" should be stored in a sparse matrix."
+msgstr ""
+
+#: Orange.data.Variable:30 of
+msgid ""
+"An optional descriptor of the source variable - if any - from which this "
+"variable is derived and computed via :obj:`compute_value`."
+msgstr ""
+
+#: Orange.data.Variable:35 of
+msgid "A dictionary with user-defined attributes of the variable"
+msgstr ""
+
+#: Orange.data.Variable:39 of
+msgid ""
+"The variable that this variable is a copy of. If a copy is made from a "
+"copy, the copy has a reference to the original master. If the variable is"
+" not a copy, it is its own master."
+msgstr ""
+
+#: Orange.data.ContinuousVariable.is_primitive:2
+#: Orange.data.DiscreteVariable.is_primitive:2
+#: Orange.data.StringVariable.is_primitive:2
+#: Orange.data.Variable.is_primitive:2 of
+msgid ""
+"`True` if the variable's values are stored as floats. Non-primitive "
+"variables can appear in the data only as meta attributes."
+msgstr ""
+
+#: Orange.data.Variable.str_val:2 of
+msgid ""
+"Return a textual representation of variable's value `val`. Argument `val`"
+" must be a float (for primitive variables) or an arbitrary Python object "
+"(for non-primitives)."
+msgstr ""
+
+#: Orange.data.Variable.str_val:6 of
+msgid "Derived classes must overload the function."
+msgstr ""
+
+#: Orange.data.Variable.to_val:2 of
+msgid ""
+"Convert the given argument to a value of the variable. The argument can "
+"be a string, a number or `None`. For primitive variables, the base class "
+"provides a method that returns :obj:`~Orange.data.Unknown` if `s` is "
+"found in :obj:`~Orange.data.Variable.unknown_str`, and raises an "
+"exception otherwise. For non-primitive variables it returns the argument "
+"itself."
+msgstr ""
+
+#: Orange.data.Variable.to_val:9 of
+msgid "Derived classes of primitive variables must overload the function."
+msgstr ""
+
+#: Orange.data.DiscreteVariable.make Orange.data.DiscreteVariable.str_val
+#: Orange.data.DiscreteVariable.to_val
+#: Orange.data.DiscreteVariable.val_from_str_add Orange.data.Variable.to_val
+#: Orange.data.Variable.val_from_str_add Orange.data.util.SharedComputeValue of
+msgid "Parameters"
+msgstr ""
+
+#: Orange.data.Variable.to_val:11 of
+msgid "value, represented as a number, string or `None`"
+msgstr ""
+
+#: Orange.data.DiscreteVariable.str_val Orange.data.DiscreteVariable.to_val
+#: Orange.data.DiscreteVariable.val_from_str_add Orange.data.Variable.to_val
+#: Orange.data.Variable.val_from_str_add of
+msgid "Return type"
+msgstr ""
+
+#: Orange.data.Variable.val_from_str_add:2 of
+msgid ""
+"Convert the given string to a value of the variable. The method is "
+"similar to :obj:`to_val` except that it only accepts strings and that it "
+"adds new values to the variable's domain where applicable."
+msgstr ""
+
+#: Orange.data.Variable.val_from_str_add:6 of
+msgid "The base class method calls `to_val`."
+msgstr ""
+
+#: Orange.data.DiscreteVariable.val_from_str_add:5
+#: Orange.data.Variable.val_from_str_add:8 of
+msgid "symbolic representation of the value"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:92
+msgid "Continuous variables"
+msgstr ""
+
+#: Orange.data.ContinuousVariable:2 of
+msgid "Descriptor for continuous variables."
+msgstr ""
+
+#: Orange.data.ContinuousVariable:6 of
+msgid "The number of decimals when the value is printed out (default: 3)."
+msgstr ""
+
+#: Orange.data.ContinuousVariable:10 of
+msgid ""
+"A flag regulating whether the `number_of_decimals` is being adjusted by "
+":obj:`to_val`."
+msgstr ""
+
+#: Orange.data.ContinuousVariable:13 of
+msgid ""
+"The value of `number_of_decimals` is set to 3 and `adjust_decimals` is "
+"set to 2. When :obj:`val_from_str_add` is called for the first time with "
+"a string as an argument, `number_of_decimals` is set to the number of "
+"decimals in the string and `adjust_decimals` is set to 1. In the "
+"subsequent calls of `to_val`, the nubmer of decimals is increased if the "
+"string argument has a larger number of decimals."
+msgstr ""
+
+#: Orange.data.ContinuousVariable:20 of
+msgid ""
+"If the `number_of_decimals` is set manually, `adjust_decimals` is set to "
+"0 to prevent changes by `to_val`."
+msgstr ""
+
+#: Orange.data.ContinuousVariable.make:2 Orange.data.StringVariable.make:2 of
+msgid ""
+"Return an existing continuous variable with the given name, or construct "
+"and return a new one."
+msgstr ""
+
+#: Orange.data.ContinuousVariable.str_val:2 of
+msgid "Return the value as a string with the prescribed number of decimals."
+msgstr ""
+
+#: Orange.data.ContinuousVariable.to_val:2 of
+msgid "Convert a value, given as an instance of an arbitrary type, to a float."
+msgstr ""
+
+#: Orange.data.ContinuousVariable.val_from_str_add:2 of
+msgid ""
+"Convert a value from a string and adjust the number of decimals if "
+"`adjust_decimals` is non-zero."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:104
+msgid "Discrete variables"
+msgstr ""
+
+#: Orange.data.DiscreteVariable:2 of
+msgid ""
+"Descriptor for symbolic, discrete variables. Values of discrete variables"
+" are stored as floats; the numbers corresponds to indices in the list of "
+"values."
+msgstr ""
+
+#: Orange.data.DiscreteVariable:8 of
+msgid "A list of variable's values."
+msgstr ""
+
+#: Orange.data.DiscreteVariable:12 of
+msgid ""
+"Some algorithms (and, in particular, visualizations) may sometime reorder"
+" the values of the variable, e.g. alphabetically. This flag hints that "
+"the given order of values is \"natural\" (e.g. \"small\", \"middle\", "
+"\"large\") and should not be changed."
+msgstr ""
+
+#: Orange.data.DiscreteVariable:19 of
+msgid ""
+"The index of the base value, or -1 if there is none. The base value is "
+"used in some methods like, for instance, when creating dummy variables "
+"for regression."
+msgstr ""
+
+#: Orange.data.DiscreteVariable.make:2 of
+msgid ""
+"Return a variable with the given name and other properties. The method "
+"first looks for a compatible existing variable: the existing variable "
+"must have the same name and both variables must have either ordered or "
+"unordered values. If values are ordered, the order must be compatible: "
+"all common values must have the same order. If values are unordered, the "
+"existing variable must have at least one common value with the new one, "
+"except when any of the two lists of values is empty."
+msgstr ""
+
+#: Orange.data.DiscreteVariable.make:10 of
+msgid ""
+"If a compatible variable is find, it is returned, with missing values "
+"appended to the end of the list. If there is no explicit order, the "
+"values are ordered using :obj:`ordered_values`. Otherwise, it constructs "
+"and returns a new variable descriptor."
+msgstr ""
+
+#: Orange.data.DiscreteVariable.make:15 of
+msgid "the name of the variable"
+msgstr ""
+
+#: Orange.data.DiscreteVariable.make:17 of
+msgid "symbolic values for the variable"
+msgstr ""
+
+#: Orange.data.DiscreteVariable.make:19 of
+msgid "tells whether the order of values is fixed"
+msgstr ""
+
+#: Orange.data.DiscreteVariable.make:21 of
+msgid "the index of the base value, or -1 if there is none"
+msgstr ""
+
+#: Orange.data.DiscreteVariable.make of
+msgid "Returns"
+msgstr ""
+
+#: Orange.data.DiscreteVariable.make:23 of
+msgid "an existing compatible variable or `None`"
+msgstr ""
+
+#: Orange.data.DiscreteVariable.str_val:2 of
+msgid ""
+"Return a textual representation of the value (`self.values[int(val)]`) or"
+" \"?\" if the value is unknown."
+msgstr ""
+
+#: Orange.data.DiscreteVariable.str_val:5 of
+msgid "value"
+msgstr ""
+
+#: Orange.data.DiscreteVariable.to_val:2 of
+msgid ""
+"Convert the given argument to a value of the variable (`float`). If the "
+"argument is numeric, its value is returned without checking whether it is"
+" integer and within bounds. `Unknown` is returned if the argument is one "
+"of the representations for unknown values. Otherwise, the argument must "
+"be a string and the method returns its index in :obj:`values`."
+msgstr ""
+
+#: Orange.data.DiscreteVariable.to_val:9 of
+msgid "values, represented as a number, string or `None`"
+msgstr ""
+
+#: Orange.data.DiscreteVariable.val_from_str_add:2 of
+msgid ""
+"Similar to :obj:`to_val`, except that it accepts only strings and that it"
+" adds the value to the list if it does not exist yet."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:115
+msgid "String variables"
+msgstr ""
+
+#: Orange.data.StringVariable:2 of
+msgid ""
+"Descriptor for string variables. String variables can only appear as meta"
+" attributes."
+msgstr ""
+
+#: Orange.data.StringVariable.str_val:2 of
+msgid "Return a string representation of the value."
+msgstr ""
+
+#: Orange.data.StringVariable.to_val:2
+#: Orange.data.StringVariable.val_from_str_add:2 of
+msgid ""
+"Return the value as a string. If it is already a string, the same object "
+"is returned."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:126
+msgid "Time variables"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:127
+msgid ""
+"Time variables are continuous variables with value 0 on the Unix epoch, 1"
+" January 1970 00:00:00.0 UTC. Positive numbers are dates beyond this "
+"date, and negative dates before. Due to limitation of Python "
+":py:mod:`datetime` module, only dates in 1 A.D. or later are supported."
+msgstr ""
+
+#: Orange.data.TimeVariable:2 of
+msgid ""
+"TimeVariable is a continuous variable with Unix epoch (1970-01-01 "
+"00:00:00+0000) as the origin (0.0). Later dates are positive real numbers"
+" (equivalent to Unix timestamp, with microseconds in the fraction part), "
+"and the dates before it map to the negative real numbers."
+msgstr ""
+
+#: Orange.data.TimeVariable:7 of
+msgid ""
+"Unfortunately due to limitation of Python datetime, only dates with year "
+">= 1 (A.D.) are supported."
+msgstr ""
+
+#: Orange.data.TimeVariable:10 of
+msgid "If time is specified without a date, Unix epoch is assumed."
+msgstr ""
+
+#: Orange.data.TimeVariable:12 of
+msgid "If time is specified wihout an UTC offset, localtime is assumed."
+msgstr ""
+
+#: Orange.data.TimeVariable.parse:2 of
+msgid ""
+"Return `datestr`, a datetime provided in one of ISO 8601 formats, parsed "
+"as a real number. Value 0 marks the Unix epoch, positive values are the "
+"dates after it, negative before."
+msgstr ""
+
+#: Orange.data.TimeVariable.parse:6 of
+msgid "If date is unspecified, epoch date is assumed."
+msgstr ""
+
+#: Orange.data.TimeVariable.parse:8 of
+msgid "If time is unspecified, 00:00:00.0 is assumed."
+msgstr ""
+
+#: Orange.data.TimeVariable.parse:10 of
+msgid "If timezone is unspecified, local time is assumed."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:137
+msgid "Derived variables"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:139
+msgid ""
+"The :obj:`~Variable.compute_value` mechanism is used throughout Orange to"
+" compute all preprocessing on training data and applying the same "
+"transformations to the testing data without hassle."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:143
+msgid ""
+"Method `compute_value` is usually invoked behind the scenes in conversion"
+" of domains. Such conversions are are typically implemented within the "
+"provided wrappers and cross-validation schemes."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:149
+msgid "Derived variables in Orange"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:151
+msgid ""
+"Orange saves variable transformations into the domain as "
+":obj:`~Variable.compute_value` functions. If Orange was not using "
+":obj:`~Variable.compute_value`, we would have to manually transform the "
+"data::"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:161
+msgid ""
+"We will create a new data set with a single feature, \"petals\", that "
+"will be a sum of petal lengths and widths::"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:170
+msgid ""
+"We have set :obj:`~Orange.data.Table`'s `X` directly. Next, we build and "
+"evaluate a classification tree::"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:182
+msgid ""
+"A classification tree shows good accuracy with cross validation, but not "
+"on separate test data, because Orange can not reconstruct the \"petals\" "
+"feature for test data---we would have to reconstruct it ourselves. But if"
+" we define :obj:`~Variable.compute_value` and therefore store the "
+"transformation in the domain, Orange could transform both training and "
+"test data::"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:197
+msgid "All preprocessors in Orange use :obj:`~Variable.compute_value`."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:200
+msgid "Example with discretization"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:202
+msgid "The following example converts features to discrete::"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:209
+msgid ""
+"A dataset is loaded and a new table with every second instance is "
+"created. On this dataset, we compute discretized data, which uses the "
+"same data to set proper discretization intervals."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:213
+msgid ""
+"The discretized variable \"D_sepal length\" stores a function that can "
+"derive continous values into discrete::"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:221
+msgid ""
+"The function is used for converting the remaining data (as automatically "
+"happens within model validation in Orange)::"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:229
+msgid ""
+"The code transforms previously unused data into the discrete domain "
+"`d_iris_1.domain`. Behind the scenes, the values for the destination "
+"domain that are not yet in the source domain (`iris_2.domain`) are "
+"computed with the destination variables' :obj:`~Variable.compute_value`."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:235
+msgid "Optimization for repeated computation"
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:237
+msgid ""
+"Some transformations share parts of computation across variables. For "
+"example, :obj:`~Orange.projection.pca.PCA` uses all input features to "
+"compute the PCA transform. If each output PCA component was implemented "
+"with ordinary :obj:`~Variable.compute_value`, the PCA transform would be "
+"repeatedly computed for each PCA component. To avoid repeated "
+"computation, set :obj:`~Variable.compute_value` to a subclass of "
+":obj:`~Orange.data.util.SharedComputeValue`."
+msgstr ""
+
+#: Orange.data.util.SharedComputeValue:2 of
+msgid ""
+"A base class that separates compute_value computation for different "
+"variables into shared and specific parts."
+msgstr ""
+
+#: Orange.data.util.SharedComputeValue:11 of
+msgid "**compute_shared: Callable[[Orange.data.Table], object]**"
+msgstr ""
+
+#: Orange.data.util.SharedComputeValue:9 of
+msgid ""
+"A callable that performs computation that is shared between multiple "
+"variables. Variables sharing computation need to set the same instance."
+msgstr ""
+
+#: Orange.data.util.SharedComputeValue:26 of
+msgid "**variable: Orange.data.Variable**"
+msgstr ""
+
+#: Orange.data.util.SharedComputeValue:14 of
+msgid "The original variable on which this compute value is set. Optional."
+msgstr ""
+
+#: Orange.data.util.SharedComputeValue.compute:2 of
+msgid ""
+"Given precomputed shared data, perform variable-specific part of "
+"computation and return new variable values. Subclasses need to implement "
+"this function."
+msgstr ""
+
+#: ../../source/reference/data.variable.rst:249
+msgid ""
+"The following example creates normalized features that divide values by "
+"row sums and then tranforms the data. In the example the function "
+"`row_sum` is called only once; if we did not use "
+":obj:`~Orange.data.util.SharedComputeValue`, `row_sum` would be called "
+"four times, once for each feature."
+msgstr ""
+

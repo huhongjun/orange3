@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/tutorial/regression.rst:2
+msgid "Regression"
+msgstr ""
+
+#: ../../source/tutorial/regression.rst:6
+msgid ""
+"Regression in Orange is, from the interface, very similar to "
+"classification. These both require class-labeled data. Just like in "
+"classification, regression is implemented with learners and regression "
+"models (regressors). Regression learners are objects that accept data and"
+" return regressors. Regression models are given data items to predict the"
+" value of continuous class:"
+msgstr ""
+
+#: ../../source/tutorial/regression.rst:12
+msgid "Handful of Regressors"
+msgstr ""
+
+#: ../../source/tutorial/regression.rst:17
+msgid ""
+"Let us start with regression trees. Below is an example script that "
+"builds a tree from data on housing prices and prints out the tree in "
+"textual form:"
+msgstr ""
+
+#: ../../source/tutorial/regression.rst:22
+msgid "The script outputs the tree::"
+msgstr ""
+
+#: ../../source/tutorial/regression.rst:35
+msgid ""
+"Following is the initialization of a few other regressors and their "
+"prediction of the first five data instances in the housing price dataset:"
+msgstr ""
+
+#: ../../source/tutorial/regression.rst:43
+msgid "Looks like the housing prices are not that hard to predict::"
+msgstr ""
+
+#: ../../source/tutorial/regression.rst:54
+msgid "Cross Validation"
+msgstr ""
+
+#: ../../source/tutorial/regression.rst:56
+msgid "Evaluation and scoring methods are available at ``Orange.evaluation``:"
+msgstr ""
+
+#: ../../source/tutorial/regression.rst:67
+msgid ""
+"We have scored the regression with two measures for goodness of fit: "
+"`root-mean-square error <https://en.wikipedia.org/wiki/Root-mean-"
+"square_deviation>`_ and `coefficient of determination "
+"<https://en.wikipedia.org/wiki/Coefficient_of_determination>`_, or R "
+"squared. Random forest has the lowest root mean squared error::"
+msgstr ""
+
+#: ../../source/tutorial/regression.rst:75
+msgid ""
+"Not much difference here. Each regression method has a set of parameters."
+" We have been running them with default parameters, and parameter fitting"
+" would help. Also, we have included ``MeanLearner`` in the list of our "
+"regressors; this regressor simply predicts the mean value from the "
+"training set, and is used as a baseline."
+msgstr ""
+
