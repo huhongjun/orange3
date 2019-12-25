@@ -1,16 +1,18 @@
-# 1. 安装软件
-* Miniconda
+# Orange3 开发指南 
+
+## 1. 安装软件
+
+* Miniconda3
 * 安装[Visual Studio compiler]. 
 
-# 2. Python环境
+## 2. Python环境
 
 * `conda create --name orange-dev`
-
 * `activate orange-dev`
-
 * `pip install PyQt5`
 
-# 3. Orange3  
+## 3. Orange3  
+
 * `git clone https://github.com/huhongjun/orange3.git`
 * `cd orange3`
 * `pip install -r requirements-core.txt  # For Orange Python library`
@@ -20,31 +22,41 @@
 * `python setup.py build_ext -i --compiler=msvc install`
 * `pip install -e .`
 
-# 4. 启动Orange图形化界面
+## 4. 启动Orange图形化界面
+
 * `python -m Orange.canvas -l4 --help`
 * `python setup.py test`
 python create_widget_catalog.py --output m:\
 
-界面汉化
--------------
-pylupdate5 canvasmain.py -ts canvasmain_zh_CN.ts
+## 5. 界面汉化
 
-canvasmain
-settings
-welcomedialog
+    参见 Orange\locale\README.md
 
-linguist 翻译工具 =》导出qs
+## 目录说明
 
-Documentation
--------------
+    doc
+    docu
+    Orange
+    scripts
+    Orange3 tutorial\    //jupyter notebook
+
+## 附录 文档
+
+### 查看
+
 Documentation in located in doc folder. It is split into three parts:
-data-mining-library (scripting api), development (development guides),
-and visual-programming (widget help files). You can build it with:
+    - data-mining-library (scripting api)
+    - development (development guides)
+    - visual-programming (widget help files)
 
-	pip install  -i https://pypi.tuna.tsinghua.edu.cn/simple sphinx numpydoc sphinx-intl jieba
+You can build it with:
+
+    pip install  -i https://pypi.tuna.tsinghua.edu.cn/simple sphinx numpydoc sphinx-intl jieba
     cd doc/<part>
     make html
     # Now open build/html/index.html to see it
+
+### 文档汉化
 
 make gettext	=》生成pot文件
 sphinx-intl update -p build/locale -l zh_CN
@@ -53,11 +65,4 @@ set SPHINXOPTS=-D language=zh_CN
 make html
 
 =》 sphinx-intl update -p build/locale  #如果文档有修改，通过新pot文件更新po文件 
-
-Orange3 tutorial
----------------
-jupyter notebook
-
-目录与文件说明
----------------
 
