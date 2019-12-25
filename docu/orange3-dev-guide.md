@@ -24,8 +24,11 @@
 
 ## 4. 启动Orange图形化界面
 
-* `python -m Orange.canvas -l4 --help`
-* `python setup.py test`
+* `cd orange3`
+* `python -m Orange.canvas -l4 --help`          \\显示命令行参数
+* `python setup.py test`                        \\ 运行单元测试
+* `orange-canvas 或 python3 -m Orange.canvas`   \\启动GUI界面，python -m Orange.canvas有效
+
 python create_widget_catalog.py --output m:\
 
 ## 5. 界面汉化
