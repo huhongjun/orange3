@@ -26,7 +26,7 @@ COMPRESSIONS = [
 
 
 class OWSave(widget.OWWidget):
-    name = "Save Data"
+    name = "保存文件"
     description = "Save data to an output file."
     icon = "icons/Save.svg"
     category = "Data"

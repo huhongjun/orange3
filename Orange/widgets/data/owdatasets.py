@@ -125,7 +125,7 @@ class Namespace(SimpleNamespace):
 
 
 class OWDataSets(widget.OWWidget):
-    name = "Datasets"
+    name = "在线数据集"
     description = "Load a dataset from an online repository"
     icon = "icons/DataSets.svg"
     priority = 20

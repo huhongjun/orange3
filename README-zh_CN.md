@@ -1,107 +1,130 @@
-Orange
-======
+# Orange
 
 [![Join the chat at https://gitter.im/biolab/orange3](https://badges.gitter.im/biolab/orange3.svg)](https://gitter.im/biolab/orange3?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![build: passing](https://img.shields.io/travis/biolab/orange3.svg)](https://travis-ci.org/biolab/orange3)
 [![codecov](https://codecov.io/gh/biolab/orange3/branch/master/graph/badge.svg)](https://codecov.io/gh/biolab/orange3)
 
-[Orange] is a component-based data mining software. It includes a range of data
-visualization, exploration, preprocessing and modeling techniques. It can be
-used through a nice and intuitive user interface or, for more advanced users,
-as a module for the Python programming language.
+[Orange]是一个组件化的数据挖掘软件。它包括一系列的数据可视化、探查、预处理和建模技术。可以通过友好、只能的图形化界面使用，对于高级用户，也可以作为Python开发的模块。
 
-This is a development version of Orange 3. The stable version 2.7 is still
-available ([binaries] and [sources]).
+这是Orange 3 开发版本，稳定版2.7可从([binaries] and [sources])获得。
 
 [Orange]: http://orange.biolab.si/
 [binaries]: http://orange.biolab.si/orange2/
 [sources]: https://github.com/biolab/orange
 
+## 安装开发环境(Ubuntu 16.04)
 
-Installing
-----------
-Orange requires Python 3.4 or newer. To build it and install
-it in a development environment, run:
+Orange需要Python 3.4+。
+为构建并安装Orange开发环境：
 
-    # Install some build requirements via your system's package manager
+    # 通过包管理器安装一些构建依赖
     sudo apt install virtualenv git build-essential python3-dev
 
-    # Create a separate Python environment for Orange and its dependencies ...
+    # 为Orange及其依赖包创建独立的Python环境
     virtualenv --python=python3 --system-site-packages orange3venv
-    # ... and make it the active one
+    # 切换到位Orange3创建的Python环境
     source orange3venv/bin/activate
 
-    # Clone the repository and move into it
+    # 克隆github仓库
     git clone https://github.com/biolab/orange3.git
     cd orange3
 
-    # Install Qt dependencies for the GUI
+    pip config set global.index-url https://pypi.mirrors.ustc.edu.cn/simple/
+    # 安装GUI需要的Qt依赖
     pip install PyQt5
-    # Of if Python <= 3.4 and/or with package manager
+    # 如果Python <= 3.4，可以用包管理器
     # sudo apt install python3-pyqt4
     
-    # Install other minimum required dependencies
-    pip install -r requirements-core.txt  # For Orange Python library
-    pip install -r requirements-gui.txt   # For Orange GUI
+    # 安装其他依赖
+    pip install -r requirements-core.txt  # Orange需要的Python库, Microsoft Visual C++ 14.0 is required. Get it with "Build Tools for Visual Studio"
+    pip install -r requirements-gui.txt   # Orange GUI需要
 
-    pip install -r requirements-sql.txt   # To use SQL support
-    pip install -r requirements-opt.txt   # Optional dependencies, may fail
+    pip install -r requirements-sql.txt   # SQL支持
+    pip install -r requirements-opt.txt   # 可选
 
-    # Finally install Orange in editable/development mode.
+    # 最后以开发模式安装Orange
     pip install -e .
 
-Installation of SciPy and qt-graph-helpers is sometimes challenging because of
-their non-python dependencies that have to be installed manually. More
-detailed, if mostly obsolete, guides for some platforms can be found in
-the [wiki].
+安装SciPy和qt-graph-helpers有时比较难，因为它们的非python依赖必须手动安装。更详细的知道参看 [wiki].
 
 [wiki]: https://github.com/biolab/orange3/wiki
 
-Anaconda Installation
----------------------
+## 安装开发环境(Windows 10)
 
-First, install [Anaconda] for your OS (Python version 3.5+). Create virtual environment for Orange:
+### 简介
+
+    Orange3需要Python 3.4+。
+    Microsoft Visual C++ 14.0 is required. Get it with "Build Tools for Visual Studio"
+
+### 步骤
+
+    git clone https://github.com/biolab/orange3.git
+    cd orange3
+
+    conda create python=3 --name orange3
+    d:\Anaconda3\Scripts\activate orange3
+
+    pip config set global.index-url https://pypi.mirrors.ustc.edu.cn/simple/
+    // 安装GUI需要的Qt依赖
+    pip install PyQt5    // 如果Python <= 3.4，可以用包管理器 sudo apt install python3-pyqt4   
+    // 安装其他依赖
+    // 手动安装VC++ 14.0 Build Tools 
+    pip install -r requirements-core.txt  # Orange需要的Python库,依赖VC++ 14.0
+    pip install -r requirements-gui.txt   # Orange GUI需要
+    pip install -r requirements-sql.txt   # SQL支持
+    pip install -r requirements-opt.txt   # 可选
+
+    // 最后以开发模式安装Orange
+    pip install -e .
+
+    // 生成安装包
+    python setup.py build_ext -i --compiler=msvc install
+
+### 启动
+
+从命令行启动Orange图形化界面，运行：
+    set QT_API=pyqt5
+    orange-canvas -h
+    # 或
+    python3 -m Orange.canvas
+
+## Anaconda安装Orange运行包
+
+首先，安装 [Anaconda] ，为Orange创建虚拟环境:
 
     conda create python=3 --name orange3 
 
-In your Anaconda Prompt add conda-forge to your channels:
+添加conda-forge：
 
     conda config --add channels conda-forge
 
-This will enable access to the latest Orange release. Then install Orange3:
+从conda-forge可获得最新版Orange3。安装Orange3:
 
     conda install orange3
 
 [Anaconda]: https://www.continuum.io/downloads
 
-Starting Orange GUI
--------------------
+## 启动Orange图形化界面
 
-Orange GUI requires PyQt, which is not pip-installable in Python 3. You
-have to download and install it system-wide. Make sure that the virtual
-environment for orange is created with `--system-site-packages`, so it will
-have access to the installed PyQt4.
+Orange图形化界面需要PyQt，PyQt在Python3没法用pip安装。你只能下载和安装为全局模式。
+确保Orange的虚拟环境创建时加上`--system-site-packages`,这样就能访问安装的PyQt4
 
-To start Orange GUI from the command line, assuming it was successfully
-installed, run:
-
+从命令行启动Orange图形化界面，运行：
     orange-canvas
-    # or
+    # 或
     python3 -m Orange.canvas
 
-Append `--help` for a list of program options.
+后面附加 `--help` 可查看启动选项列表。
 
-If you're running Orange with PyQt5 or if you have multiple PyQt versions
-available, set the environmental variable `QT_API` to the PyQt version to use,
-e.g.:
+如果你是在PyQt5上运行Orange，或者安装了多个PyQT版本，设置环境变量QT_API为指定的PyQT版本，
+如：
 
     export QT_API=pyqt5
     orange-canvas
 
 
-如何在Windows平台编译
---------------------
+## 如何在Windows平台编译
 
 下载正确的安装包。需要[numpy+mkl]和[scipy]。
 
@@ -112,9 +135,34 @@ e.g.:
 
     pip install some-wheel.whl
 
-安装[Visual Studio compiler]. 
+安装[Visual Studio compiler].
+
     [Visual Studio compiler]: http://download.microsoft.com/download/5/F/7/5F7ACAEB-8363-451F-9425-68A90F98B238/visualcppbuildtools_full.exe
 
-在Orange3目录下运行：
+然后，在Orange3目录下运行：
 
     python setup.py build_ext -i --compiler=msvc install
+
+## 补充
+
+d:\Anaconda3\Scripts\activate 
+d:/Anaconda3/envs/awscli/python.exe -m pip install -U pylint
+
+BC4
+
+过滤
+
+文件夹
+
+.\.git
+.\.ipynb_checkpoints
+.\.settings
+.\.vscode
+.\build
+.\dist
+***\__pycache__
+***\.ipynb_checkpoints
+
+文件
+
+*.pyd

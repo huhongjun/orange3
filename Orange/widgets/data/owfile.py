@@ -70,7 +70,7 @@ class LineEditSelectOnFocus(QLineEdit):
 
 
 class OWFile(widget.OWWidget, RecentPathsWComboMixin):
-    name = "文件"
+    name = "读取文件"
     id = "orange.widgets.data.file"
     description = "从输入文件或网络加载数据并且" \
                   "发送一个数据表到输出端口。"

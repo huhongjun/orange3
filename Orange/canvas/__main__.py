@@ -22,7 +22,7 @@ import pkg_resources
 from AnyQt.QtGui import QFont, QColor, QPalette, QDesktopServices
 from AnyQt.QtWidgets import QMessageBox
 from AnyQt.QtCore import (
-    Qt, QDir, QUrl, QSettings, QThread, pyqtSignal, QT_VERSION
+    Qt, QDir, QUrl, QSettings, QThread, pyqtSignal, QT_VERSION, QTranslator
 )
 
 from Orange import canvas
@@ -128,7 +128,7 @@ def show_survey():
     if show_survey:
         question = QMessageBox(
             QMessageBox.Question,
-            'Orange Survey',
+            'Orange调查',
             'We would like to know more about how our software is used.\n\n'
             'Would you care to fill our short 1-minute survey?',
             QMessageBox.Yes | QMessageBox.No)
@@ -234,7 +234,7 @@ def main(argv=None):
                       help="Remove stored widget setting")
     parser.add_option("--no-welcome",
                       action="store_true",
-                      help="Don't show welcome dialog.")
+                      help="不显示欢迎对话框。")
     parser.add_option("--no-splash",
                       action="store_true",
                       help="Don't show splash screen.")
@@ -281,6 +281,7 @@ def main(argv=None):
     stream_hander.setLevel(level=levels[options.log_level])
     rootlogger.addHandler(stream_hander)
 
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     log.info("Starting 'Orange Canvas' application.")
 
     qt_argv = argv[:1]
@@ -306,6 +307,14 @@ def main(argv=None):
 
     log.debug("Starting CanvasApplicaiton with argv = %r.", qt_argv)
     app = CanvasApplication(qt_argv)
+
+    locale_path = "..\\locale\\zh_CN\\orange_zh_CN.qm"
+    if os.path.exists(locale_path):
+        log.info("加载中文文件%s" % locale_path)
+        trans = QTranslator()
+        trans.load(locale_path)
+        app.installTranslator(trans)    
+
     if app.style().metaObject().className() == "QFusionStyle":
         if fusiontheme == "breeze-dark":
             app.setPalette(breeze_dark())

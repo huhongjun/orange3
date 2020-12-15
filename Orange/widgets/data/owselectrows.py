@@ -70,7 +70,7 @@ class FilterDiscreteType(enum.Enum):
 
 
 class OWSelectRows(widget.OWWidget):
-    name = "Select Rows"
+    name = "行选择"
     id = "Orange.widgets.data.file"
     description = "Select rows from the data based on values of variables."
     icon = "icons/SelectRows.svg"
