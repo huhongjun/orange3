@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/misc.distmatrix.rst:3
+msgid "Distance Matrix (``distmatrix``)"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix:2 of
+msgid "Distance matrix. Extends ``numpy.ndarray``."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix:6 of
+msgid "Items corresponding to matrix rows."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix:10 of
+msgid "Items corresponding to matrix columns."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix:14 of
+msgid ""
+"If axis=1 we calculate distances between rows, if axis=0 we calculate "
+"distances between columns."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.dim:2 of
+msgid "Returns the single dimension of the symmetric square matrix."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.flat:2 of
+msgid "A 1-D iterator over the array."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.flat:4 of
+msgid ""
+"This is a `numpy.flatiter` instance, which acts similarly to, but is not "
+"a subclass of, Python's built-in iterator object."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.flat:18 of
+msgid ":obj:`flatten`"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.flat:18 of
+msgid "Return a copy of the array collapsed into one dimension."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.flat:20 of
+msgid ":obj:`flatiter`"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.flat:25 of
+msgid "Examples"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.flat:41 of
+msgid "An assignment example:"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.submatrix:2 of
+msgid "Return a submatrix"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:45
+#: Orange.misc.distmatrix.DistMatrix.save:19
+#: Orange.misc.distmatrix.DistMatrix.submatrix:19 of
+msgid "Args:"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.submatrix:5 of
+msgid "row_items: indices of rows col_items: incides of columns"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:2 of
+msgid "Load distance matrix from a file"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:4 of
+msgid ""
+"The file should be preferrably encoded in ascii/utf-8. White space at the"
+" beginning and end of lines is ignored."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:7 of
+msgid ""
+"The first line of the file starts with the matrix dimension. It can be "
+"followed by a list flags"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:10 of
+msgid "*axis=<number>*: the axis number"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:11 of
+msgid ""
+"*symmetric*: the matrix is symmetric; when reading the element (i, j) "
+"it's value is also assigned to (j, i)"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:13 of
+msgid "*asymmetric*: the matrix is asymmetric"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:14 of
+msgid "*row_labels*: the file contains row labels"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:15 of
+msgid "*col_labels*: the file contains column labels"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:17 of
+msgid ""
+"By default, matrices are symmetric, have axis 1 and no labels are given. "
+"Flags *labeled* and *labelled* are obsolete aliases for *row_labels*."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:20 of
+msgid ""
+"If the file has column labels, they follow in the second line. Row labels"
+" appear at the beginning of each row. Labels are arbitrary strings that "
+"cannot contain newlines and tabulators. Labels are stored as instances of"
+" `Table` with a single meta attribute named \"label\"."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:26 of
+msgid ""
+"The remaining lines contain tab-separated numbers, preceded with labels, "
+"if present. Lines are padded with zeros if necessary. If the matrix is "
+"symmetric, the file contains the lower triangle; any data above the "
+"diagonal is ignored."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.from_file:32
+#: Orange.misc.distmatrix.DistMatrix.save:6 of
+msgid "filename: file name"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.has_row_labels:2 of
+msgid "Returns `True` if row labels can be automatically determined from data"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.has_row_labels:4 of
+msgid ""
+"For this, the `row_items` must be an instance of `Orange.data.Table` "
+"whose domain contains a single meta attribute, which has to be a string. "
+"The domain may contain other variables, but not meta attributes."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.has_col_labels:2 of
+msgid "Returns `True` if column labels can be automatically determined from data"
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.has_col_labels:5 of
+msgid ""
+"For this, the `col_items` must be an instance of `Orange.data.Table` "
+"whose domain contains a single meta attribute, which has to be a string. "
+"The domain may contain other variables, but not meta attributes."
+msgstr ""
+
+#: Orange.misc.distmatrix.DistMatrix.save:2 of
+msgid ""
+"Save the distance matrix to a file in the file format described at "
+":obj:`~Orange.misc.distmatrix.DistMatrix.from_file`."
+msgstr ""
+

@@ -1,0 +1,316 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/tutorial/data.rst:2
+msgid "The Data"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:6
+msgid ""
+"This section describes how to load the data in Orange. We also show how "
+"to explore the data, perform some basic statistics, and how to sample the"
+" data."
+msgstr "这一节说明如何加载数据。我们也会展示如何浏览数据、执行一些基础地统计，以及如何抽样数据。"
+
+#: ../../source/tutorial/data.rst:9
+msgid "Data Input"
+msgstr "数据输入"
+
+#: ../../source/tutorial/data.rst:14
+msgid ""
+"Orange can read files in native tab-delimited format, or can load data "
+"from any of the major standard spreadsheet file types, like CSV and "
+"Excel. Native format starts with a header row with feature (column) "
+"names. The second header row gives the attribute type, which can be "
+"continuous, discrete, time, or string. The third header line contains "
+"meta information to identify dependent features (class), irrelevant "
+"features (ignore) or meta features (meta). More detailed specification is"
+" available in :doc:`../reference/data.io`. Here are the first few lines "
+"from a dataset :download:`lenses.tab <code/lenses.tab>`::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:28
+msgid ""
+"Values are tab-limited. This dataset has four attributes (age of the "
+"patient, spectacle prescription, notion on astigmatism, and information "
+"on tear production rate) and an associated three-valued dependent "
+"variable encoding lens prescription for the patient (hard contact lenses,"
+" soft contact lenses, no lenses). Feature descriptions could use one "
+"letter only, so the header of this dataset could also read::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:34
+msgid ""
+"The rest of the table gives the data. Note that there are 5 instances in "
+"our table above. For the full dataset, check out or download "
+":download:`lenses.tab <code/lenses.tab>`) to a target directory. You can "
+"also skip this step as Orange comes preloaded with several demo datasets,"
+" lenses being one of them. Now, open a python shell, import Orange and "
+"load the data:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:40
+msgid ""
+"Note that for the file name no suffix is needed, as Orange checks if any "
+"files in the current directory are of a readable type. The call to "
+"``Orange.data.Table`` creates an object called ``data`` that holds your "
+"dataset and information about the lenses domain:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:57
+msgid ""
+"The following script wraps-up everything we have done so far and lists "
+"first 5 data instances with ``soft`` prescription:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:61
+msgid ""
+"Note that data is an object that holds both the data and information on "
+"the domain. We show above how to access attribute and class names, but "
+"there is much more information there, including that on feature type, set"
+" of values for categorical features, and other."
+msgstr ""
+
+#: ../../source/tutorial/data.rst:64
+msgid "Saving the Data"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:66
+msgid "Data objects can be saved to a file:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:71
+msgid ""
+"This time, we have to provide the file extension to specify the output "
+"format. An extension for native Orange's data format is \".tab\". The "
+"following code saves only the data items with myope perscription:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:75
+msgid ""
+"We have created a new data table by passing the information on the "
+"structure of the data (``data.domain``) and a subset of data instances."
+msgstr ""
+
+#: ../../source/tutorial/data.rst:78
+msgid "Exploration of the Data Domain"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:87
+msgid ""
+"Data table stores information on data instances as well as on data "
+"domain. Domain holds the names of attributes, optional classes, their "
+"types and, and if categorical, the value names. The following code:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:91
+msgid "outputs::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:97
+msgid ""
+"Orange's objects often behave like Python lists and dictionaries, and can"
+" be indexed or accessed through feature names:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:102
+msgid "The output of the above code is::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:108
+msgid "Data Instances"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:115
+msgid ""
+"Data table stores data instances (or examples). These can be indexed or "
+"traversed as any Python list. Data instances can be considered as "
+"vectors, accessed through element index, or through feature name."
+msgstr ""
+
+#: ../../source/tutorial/data.rst:119
+msgid "The script above displays the following output::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:130
+msgid ""
+"The Iris dataset we have used above has four continuous attributes. "
+"Here's a script that computes their mean:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:135
+msgid ""
+"The above script also illustrates indexing of data instances with objects"
+" that store features; in ``d[x]`` variable ``x`` is an Orange object. "
+"Here's the output::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:144
+msgid ""
+"A slightly more complicated, but also more interesting, code that "
+"computes per-class averages:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:149
+msgid ""
+"Of the four features, petal width and length look quite discriminative "
+"for the type of iris::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:157
+msgid ""
+"Finally, here is a quick code that computes the class distribution for "
+"another dataset:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:162
+msgid "Orange Datasets and NumPy"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:163
+msgid ""
+"Orange datasets are actually wrapped `NumPy <http://www.numpy.org>`_ "
+"arrays. Wrapping is performed to retain the information about the feature"
+" names and values, and NumPy arrays are used for speed and compatibility "
+"with different machine learning toolboxes, like `scikit-learn <http"
+"://scikit-learn.org>`_, on which Orange relies. Let us display the values"
+" of these arrays for the first three data instances of the iris dataset::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:173
+msgid ""
+"Notice that we access the arrays for attributes and class separately, "
+"using ``data.X`` and ``data.Y``. Average values of attributes can then be"
+" computed efficiently by::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:179
+msgid "We can also construct a (classless) dataset from a numpy array::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:186
+msgid ""
+"If we want to provide meaninful names to attributes, we need to construct"
+" an appropriate data domain::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:194
+msgid ""
+"Here is another example, this time with the construction of a dataset "
+"that includes a numerical class and different types of attributes:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:199
+msgid "Running of this scripts yields::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:206
+msgid "Meta Attributes"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:208
+msgid ""
+"Often, we wish to include descriptive fields in the data that will not be"
+" used in any computation (distance estimation, modeling), but will serve "
+"for identification or additional information. These are called meta "
+"attributes, and are marked with ``meta`` in the third header row:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:212
+msgid ""
+"Values of meta attributes and all other (non-meta) attributes are treated"
+" similarly in Orange, but stored in separate numpy arrays:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:235
+msgid ""
+"Meta attributes may be passed to ``Orange.data.Table`` after providing "
+"arrays for attribute and class values:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:239
+msgid "The script outputs::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:244
+msgid ""
+"To construct a classless domain we could pass ``None`` for the class "
+"values."
+msgstr ""
+
+#: ../../source/tutorial/data.rst:247
+msgid "Missing Values"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:252
+msgid ""
+"Consider the following exploration of the dataset on votes of the US "
+"senate::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:263
+msgid ""
+"The particular data instance included missing data (represented with '?')"
+" for the first and the fourth attribute. In the original dataset file, "
+"the missing values are, by default, represented with a blank space. We "
+"can now examine each attribute and report on proportion of data instances"
+" for which this feature was undefined:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:268
+msgid "First three lines of the output of this script are::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:274
+msgid ""
+"A single-liner that reports on number of data instances with at least one"
+" missing value is::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:282
+msgid "Data Selection and Sampling"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:287
+msgid ""
+"Besides the name of the data file, ``Orange.data.Table`` can accept the "
+"data domain and a list of data items and returns a new dataset. This is "
+"useful for any data subsetting:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:292
+msgid "The code outputs::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:297
+msgid ""
+"and inherits the data description (domain) from the original dataset. "
+"Changing the domain requires setting up a new domain descriptor. This "
+"feature is useful for any kind of feature selection:"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:305
+msgid "We could also construct a random sample of the dataset::"
+msgstr ""
+
+#: ../../source/tutorial/data.rst:314
+msgid "or randomly sample the attributes:"
+msgstr ""
+

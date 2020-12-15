@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/projection.rst:3
+msgid "Projection (``projection``)"
+msgstr ""
+
+#: ../../source/reference/projection.rst:10
+msgid "PCA"
+msgstr ""
+
+#: ../../source/reference/projection.rst:12
+msgid ""
+"Principal component analysis is a statistical procedure that uses an "
+"orthogonal transformation to convert a set of observations of possibly "
+"correlated variables into a set of values of linearly uncorrelated "
+"variables called principal components."
+msgstr ""
+
+#: ../../source/reference/projection.rst:19
+#: ../../source/reference/projection.rst:61
+#: ../../source/reference/projection.rst:100
+msgid "Example"
+msgstr ""
+
+#: Orange.projection.pca.PCA:2 of
+msgid ""
+"A wrapper for `sklearn.decomposition.pca.PCA`. The following is its "
+"documentation:"
+msgstr ""
+
+#: Orange.projection.pca.PCA:4 of
+msgid "Principal component analysis (PCA)"
+msgstr ""
+
+#: Orange.projection.pca.PCA:6 of
+msgid ""
+"Linear dimensionality reduction using Singular Value Decomposition of the"
+" data to project it to a lower dimensional space."
+msgstr ""
+
+#: Orange.projection.pca.PCA:9 of
+msgid ""
+"It uses the LAPACK implementation of the full SVD or a randomized "
+"truncated SVD by the method of Halko et al. 2009, depending on the shape "
+"of the input data and the number of components to extract."
+msgstr ""
+
+#: Orange.projection.pca.PCA:13 of
+msgid ""
+"It can also use the scipy.sparse.linalg ARPACK implementation of the "
+"truncated SVD."
+msgstr ""
+
+#: Orange.projection.pca.PCA:16 of
+msgid ""
+"Notice that this class does not support sparse input. See "
+":class:`TruncatedSVD` for an alternative with sparse data."
+msgstr ""
+
+#: Orange.projection.pca.PCA:19 of
+msgid "Read more in the :ref:`User Guide <PCA>`."
+msgstr ""
+
+#: Orange.projection.pca.SparsePCA:2 of
+msgid ""
+"A wrapper for `sklearn.decomposition.sparse_pca.SparsePCA`. The following"
+" is its documentation:"
+msgstr ""
+
+#: Orange.projection.pca.SparsePCA:4 of
+msgid "Sparse Principal Components Analysis (SparsePCA)"
+msgstr ""
+
+#: Orange.projection.pca.SparsePCA:6 of
+msgid ""
+"Finds the set of sparse components that can optimally reconstruct the "
+"data.  The amount of sparseness is controllable by the coefficient of the"
+" L1 penalty, given by the parameter alpha."
+msgstr ""
+
+#: Orange.projection.pca.SparsePCA:10 of
+msgid "Read more in the :ref:`User Guide <SparsePCA>`."
+msgstr ""
+
+#: Orange.projection.pca.IncrementalPCA:2 of
+msgid ""
+"A wrapper for `sklearn.decomposition.incremental_pca.IncrementalPCA`. The"
+" following is its documentation:"
+msgstr ""
+
+#: Orange.projection.pca.IncrementalPCA:4 of
+msgid "Incremental principal components analysis (IPCA)."
+msgstr ""
+
+#: Orange.projection.pca.IncrementalPCA:6 of
+msgid ""
+"Linear dimensionality reduction using Singular Value Decomposition of "
+"centered data, keeping only the most significant singular vectors to "
+"project the data to a lower dimensional space."
+msgstr ""
+
+#: Orange.projection.pca.IncrementalPCA:10 of
+msgid ""
+"Depending on the size of the input data, this algorithm can be much more "
+"memory efficient than a PCA."
+msgstr ""
+
+#: Orange.projection.pca.IncrementalPCA:13 of
+msgid ""
+"This algorithm has constant memory complexity, on the order of "
+"``batch_size``, enabling use of np.memmap files without loading the "
+"entire file into memory."
+msgstr ""
+
+#: Orange.projection.pca.IncrementalPCA:17 of
+msgid ""
+"The computational overhead of each SVD is ``O(batch_size * n_features ** "
+"2)``, but only 2 * batch_size samples remain in memory at a time. There "
+"will be ``n_samples / batch_size`` SVD computations to get the principal "
+"components, versus 1 large SVD of complexity ``O(n_samples * n_features "
+"** 2)`` for PCA."
+msgstr ""
+
+#: Orange.projection.pca.IncrementalPCA:23 of
+msgid "Read more in the :ref:`User Guide <IncrementalPCA>`."
+msgstr ""
+
+#: ../../source/reference/projection.rst:50
+msgid "FreeViz"
+msgstr ""
+
+#: ../../source/reference/projection.rst:52
+msgid ""
+"FreeViz uses a paradigm borrowed from particle physics: points in the "
+"same class attract each other, those from different class repel each "
+"other, and the resulting forces are exerted on the anchors of the "
+"attributes, that is, on unit vectors of each of the dimensional axis. The"
+" points cannot move (are projected in the projection space), but the "
+"attribute anchors can, so the optimization process is a hill-climbing "
+"optimization where at the end the anchors are placed such that forces are"
+" in equilibrium."
+msgstr ""
+
+#: ../../source/reference/projection.rst:91
+msgid "LDA"
+msgstr ""
+
+#: ../../source/reference/projection.rst:93
+msgid ""
+"Linear discriminant analysis is another way of finding a linear "
+"transformation of data that reduces the number of dimensions required to "
+"represent it. It is often used for dimensionality reduction prior to "
+"classification, but can also be used as a classification technique itself"
+" ([1]_)."
+msgstr ""
+
+#: ../../source/reference/projection.rst:129
+msgid "References"
+msgstr ""
+
+#: ../../source/reference/projection.rst:131
+msgid ""
+"Witten, I.H., Frank, E., Hall, M.A. and Pal, C.J., 2016. Data Mining: "
+"Practical machine learning tools and techniques. Morgan Kaufmann."
+msgstr ""
+

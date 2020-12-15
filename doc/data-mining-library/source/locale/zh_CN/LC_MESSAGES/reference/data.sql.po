@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/data.sql.rst:5
+msgid "SQL table (``data.sql``)"
+msgstr ""
+
+#: ../../source/reference/data.sql.rst:11
+msgid ""
+":obj:`SqlTable` represents a table with the data which is stored in the "
+"database. Besides the inherited attributes, the object stores a "
+"connection to the database and row filters."
+msgstr ""
+
+#: ../../source/reference/data.sql.rst:15
+msgid ""
+"Constructor connects to the database, infers the variable types from the "
+"types of the columns in the database and constructs the corresponding "
+"domain description. Discrete and continuous variables are put among "
+"attributes, and string variables are meta attributes. The domain does not"
+" have a class."
+msgstr ""
+
+#: ../../source/reference/data.sql.rst:21
+msgid ""
+":obj:`SqlTable` overloads the data access methods for random access to "
+"rows and for iteration (`__getitem__` and `__iter__`). It also provides "
+"methods for fast computation of basic statistics, distributions and "
+"contingency matrices, as well as for filtering the data. Filtering the "
+"data returns a new instance of :obj:`SqlTable`. The new instances however"
+" differs only in that an additional filter is added to the row_filter."
+msgstr ""
+
+#: ../../source/reference/data.sql.rst:28
+msgid ""
+"All evaluation is lazy in the sense that most operations just modify the "
+"domain and the list of filters. These are used to construct an SQL query "
+"when the data is actually needed, for instance to retrieve a data row or "
+"compute a distribution of values for a certain column."
+msgstr ""
+
+#: ../../source/reference/data.sql.rst:35
+msgid ""
+"The object that holds the database connection. An instance of a class "
+"compatible with Python DB API 2.0."
+msgstr ""
+
+#: ../../source/reference/data.sql.rst:40
+msgid "The host name of the database server"
+msgstr ""
+
+#: ../../source/reference/data.sql.rst:44
+msgid "The name of the database"
+msgstr ""
+
+#: ../../source/reference/data.sql.rst:48
+msgid "The name of the table in the database"
+msgstr ""
+
+#: ../../source/reference/data.sql.rst:52
+msgid ""
+"A list of filters that are applied when constructing the query. The "
+"filters in the should have a method `to_sql`. Module "
+":obj:`Orange.data.sql.filter` contains classes derived from filters in "
+":obj:`Orange.data.filter` with the appropriate implementation of the "
+"method."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__new__:2 of
+msgid "Create and return a new object.  See help(type) for accurate signature."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__init__:2 of
+msgid "Create a new proxy for sql table."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__init__:4 of
+msgid ""
+"To create a new SqlTable, specify the connection parameters for psycopg2 "
+"and the name of the table/sql query used to fetch the data."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__init__:8 of
+msgid ""
+"table = SqlTable('database_name', 'table_name') table = "
+"SqlTable('database_name', 'SELECT * FROM table')"
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__init__:11 of
+msgid ""
+"For complex configurations, dictionary of connection parameters can be "
+"used instead of the database name. For documentation about connection "
+"parameters, see: http://www.postgresql.org/docs/current/static/libpq-"
+"connect.html#LIBPQ-PARAMKEYWORDS"
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__init__:16 of
+msgid "Data domain is inferred from the columns of the table/query."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__init__:18 of
+msgid ""
+"The (very quick) default setting is to treat all numeric columns as "
+"continuous variables and everything else as strings and placed among meta"
+" attributes."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__init__:22 of
+msgid ""
+"If inspect_values parameter is set to True, all column values are "
+"inspected and int/string columns with less than 21 values are intepreted "
+"as discrete features."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__init__:26 of
+msgid ""
+"Domains can be constructed by the caller and passed in type_hints "
+"parameter. Variables from the domain are used for the columns with the "
+"matching names; for columns without the matching name in the domain, "
+"types are inferred as described above."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__getitem__:2 of
+msgid "Indexing of SqlTable is performed in the following way:"
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__getitem__:4 of
+msgid ""
+"If a single row is requested, it is fetched from the database and "
+"returned as a SqlRowInstance."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__getitem__:7 of
+msgid ""
+"A new SqlTable with appropriate filters is constructed and returned "
+"otherwise."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__iter__:2 of
+msgid ""
+"Iterating through the rows executes the query using a cursor and then "
+"yields resulting rows as SqlRowInstances as they are requested."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.copy:2 of
+msgid "Return a copy of the SqlTable"
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__bool__:2 of
+msgid "Return True if the SqlTable is not empty."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.__len__:2 of
+msgid ""
+"Return number of rows in the table. The value is cached so it is computed"
+" only the first time the length is requested."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.download_data:2 of
+msgid "Download SQL data and store it in memory as numpy matrices."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.X:2 of
+msgid "Numpy array with attribute values."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.W:2 Orange.data.sql.table.SqlTable.Y:2
+#: Orange.data.sql.table.SqlTable.ids:2 Orange.data.sql.table.SqlTable.metas:2
+#: of
+msgid "Numpy array with class values."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.has_weights:2 of
+msgid "Return `True` if the data instances are weighed."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.from_table:2 of
+msgid ""
+"Create a new table from selected columns and/or rows of an existing one. "
+"The columns are chosen using a domain. The domain may also include "
+"variables that do not appear in the source table; they are computed from "
+"source variables if possible."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.from_table:7 of
+msgid "The resulting data may be a view or a copy of the existing data."
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.from_table of
+msgid "Parameters"
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.from_table:9 of
+msgid "the domain for the new table"
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.from_table:11 of
+msgid "the source table"
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.from_table:13 of
+msgid "indices of the rows to include"
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.from_table of
+msgid "Returns"
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.from_table:15 of
+msgid "a new table"
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.from_table of
+msgid "Return type"
+msgstr ""
+
+#: Orange.data.sql.table.SqlTable.checksum:2 of
+msgid "Return a checksum over X, Y, metas and W."
+msgstr ""
+
+#: Orange.data.sql.table.SqlRowInstance:2 of
+msgid ""
+"Extends :obj:`Orange.data.Instance` to correctly handle values of meta "
+"attributes."
+msgstr ""
+

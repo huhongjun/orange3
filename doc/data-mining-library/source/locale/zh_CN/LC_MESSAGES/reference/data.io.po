@@ -1,0 +1,313 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/data.io.rst:5
+msgid "Loading and saving data (``io``)"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:7
+msgid ":obj:`Orange.data.Table` supports loading from several file formats:"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:9
+msgid "Comma-separated values (\\*.csv) file,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:10
+msgid "Tab-separated values (\\*.tab, \\*.tsv) file,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:11
+msgid "Excel spreadsheet (\\*.xls, \\*.xlsx),"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:12
+msgid "Basket file,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:13
+msgid "Python pickle."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:15
+msgid ""
+"In addition, the text-based files (CSV, TSV) can be compressed with gzip,"
+" bzip2 or xz (e.g. \\*.csv.gz)."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:20
+msgid "Header Format"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:22
+msgid ""
+"The data in CSV, TSV, and Excel files can be described in an extended "
+"three-line header format, or a condensed single-line header format."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:27
+msgid "Three-line header format"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:29
+msgid "A three-line header consists of:"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:31
+msgid ""
+"**Feature names** on the first line. Feature names can include any "
+"combination of characters."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:34
+msgid ""
+"**Feature types** on the second line. The type is determined "
+"automatically, or, if set, can be any of the following:"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:37
+msgid "``discrete`` (or ``d``) — imported as :obj:`Orange.data.DiscreteVariable`,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:38
+msgid ""
+"a space-separated **list of discrete values**, like \"``male female``\", "
+"which will result in :obj:`Orange.data.DiscreteVariable` with those "
+"values and in that order. If the individual values contain a space "
+"character, it needs to be escaped (prefixed) with, as common, a backslash"
+" ('\\\\') character."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:42
+msgid ""
+"``continuous`` (or ``c``) — imported as "
+":obj:`Orange.data.ContinuousVariable`,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:43
+msgid ""
+"``string`` (or ``s``, or ``text``) — imported as "
+":obj:`Orange.data.StringVariable`,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:44
+msgid ""
+"``time`` (or ``t``) — imported as :obj:`Orange.data.TimeVariable`, if the"
+" values parse as `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ "
+"date/time formats,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:46
+msgid ""
+"``basket`` — used for storing sparse data. More on basket formats in a "
+"dedicated section."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:49
+msgid ""
+"**Flags** (optional) on the third header line. Feature's flag can be "
+"empty, or it can contain, space-separated, a consistent combination of:"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:52
+msgid ""
+"``class`` (or ``c``) — feature will be imported as a class variable. Most"
+" algorithms expect a single class variable."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:54
+msgid ""
+"``meta`` (or ``m``) — feature will be imported as a meta-attribute, just "
+"describing the data instance but not actually used for learning,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:56
+msgid ""
+"``weight`` (or ``w``) — the feature marks the weight of examples (in "
+"algorithms that support weighted examples),"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:58
+msgid "``ignore`` (or ``i``) — feature will not be imported,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:59
+msgid "``<key>=<value>`` custom attributes."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:61
+msgid ""
+"Example of iris dataset in Orange's three-line format "
+"(:download:`iris.tab <../../../../Orange/datasets/iris.tab>`)."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:69
+msgid "Single-line header format"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:71
+msgid ""
+"Single-line header consists of feature names prefixed by an optional "
+"\"``<flags>#``\" string, i.e. flags followed by a hash ('#') sign. The "
+"flags can be a consistent combination of:"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:75
+msgid "``c`` for class feature,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:76
+msgid "``i`` for feature to be ignored,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:77
+msgid "``m`` for meta attributes (not used in learning),"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:78
+msgid "``C`` for features that are continuous,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:79
+msgid "``D`` for features that are discrete,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:80
+msgid ""
+"``T`` for features that represent date and/or time in one of the ISO 8601"
+" formats,"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:82
+msgid "``S`` for string features."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:84
+msgid ""
+"If some (all) names or flags are omitted, the names, types, and flags are"
+" discerned automatically, and correctly (most of the time)."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:89
+msgid "Baskets"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:91
+msgid ""
+"Baskets can be used for storing sparse data in tab delimited files. They "
+"were specifically designed for text mining needs. If text mining and "
+"sparse data is not your business, you can skip this section."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:95
+msgid ""
+"Baskets are given as a list of space-separated ``<name>=<value>`` atoms. "
+"A continuous meta attribute named ``<name>`` will be created and added to"
+" the domain as optional if it is not already there. A meta value for that"
+" variable will be added to the example. If the value is 1, you can omit "
+"the ``=<value>`` part."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:100
+msgid ""
+"It is not possible to put meta attributes of other types than continuous "
+"in the basket."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:103
+msgid "A tab delimited file with a basket can look like this::"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:113
+msgid "These are the examples read from such a file::"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:120
+msgid ""
+"It is recommended to have the basket as the last column, especially if it"
+" contains a lot of data."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:123
+msgid ""
+"Note a few things. The basket column's name, ``b_foo``, is not used. In "
+"the first example, the value of ``a`` is 2 since it appears twice. The "
+"ordinary meta attribute, ``Ca``, appears in all examples, even in those "
+"where its value is undefined. Meta attributes from the basket appear only"
+" where they are defined. This is due to the different nature of these "
+"meta attributes: ``Ca`` is required while the others are optional.  ::"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:133
+msgid ""
+"To fully understand all this, you should read the documentation on "
+":ref:`meta attributes <meta-attributes>` in Domain and on the "
+":ref:`basket file format <basket-format>` (a simple format that is "
+"limited to baskets only)."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:140
+msgid "Basket Format"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:142
+msgid ""
+"Basket files (.basket) are suitable for representing sparse data. Each "
+"example is represented by a line in the file. The line is written as a "
+"comma-separated list of name-value pairs. Here's an example of such file."
+" ::"
+msgstr ""
+
+#: ../../source/reference/data.io.rst:151
+msgid ""
+"The file contains four examples. The first examples has five attributes "
+"defined, \"nobody\", \"expects\", \"the\", \"Spanish\" and "
+"\"Inquisition\"; the first four have (the default) value of 1.0 and the "
+"last has a value of 5.0."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:155
+msgid ""
+"The attributes that appear in the domain aren't defined in any headers or"
+" even separate files, as with other formats supported by Orange."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:158
+msgid ""
+"If attribute appears more than once, its values are added. For instance, "
+"the value of attribute \"surprise\" in the second examples is 6.0 and the"
+" value of \"fear\" is 2.0; the former appears three times with values of "
+"3.0, 2.0 and 1.0, and the latter appears twice with value of 1.0."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:163
+msgid ""
+"All attributes are loaded as optional meta-attributes, so zero values "
+"don't take any memory (unless they are given, but initialized to zero). "
+"See also section on :ref:`meta attributes <meta-attributes>` in the "
+"reference for domain descriptors."
+msgstr ""
+
+#: ../../source/reference/data.io.rst:168
+msgid ""
+"Notice that at the time of writing this reference only association rules "
+"can directly use examples presented in the basket format."
+msgstr ""
+

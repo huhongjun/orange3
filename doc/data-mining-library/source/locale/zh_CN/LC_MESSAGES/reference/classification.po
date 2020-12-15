@@ -1,0 +1,798 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/classification.rst:3
+msgid "Classification (``classification``)"
+msgstr ""
+
+#: ../../source/reference/classification.rst:11
+msgid "Logistic Regression"
+msgstr ""
+
+#: Orange.classification.LogisticRegressionLearner:2 of
+msgid ""
+"A wrapper for `sklearn.linear_model.logistic.LogisticRegression`. The "
+"following is its documentation:"
+msgstr ""
+
+#: Orange.classification.LogisticRegressionLearner:4 of
+msgid "Logistic Regression (aka logit, MaxEnt) classifier."
+msgstr ""
+
+#: Orange.classification.LogisticRegressionLearner:6 of
+msgid ""
+"In the multiclass case, the training algorithm uses the one-vs-rest (OvR)"
+" scheme if the 'multi_class' option is set to 'ovr', and uses the cross- "
+"entropy loss if the 'multi_class' option is set to 'multinomial'. "
+"(Currently the 'multinomial' option is supported only by the 'lbfgs', "
+"'sag' and 'newton-cg' solvers.)"
+msgstr ""
+
+#: Orange.classification.LogisticRegressionLearner:12 of
+msgid ""
+"This class implements regularized logistic regression using the "
+"'liblinear' library, 'newton-cg', 'sag' and 'lbfgs' solvers. It can "
+"handle both dense and sparse input. Use C-ordered arrays or CSR matrices "
+"containing 64-bit floats for optimal performance; any other input format "
+"will be converted (and copied)."
+msgstr ""
+
+#: Orange.classification.LogisticRegressionLearner:18 of
+msgid ""
+"The 'newton-cg', 'sag', and 'lbfgs' solvers support only L2 "
+"regularization with primal formulation. The 'liblinear' solver supports "
+"both L1 and L2 regularization, with a dual formulation only for the L2 "
+"penalty."
+msgstr ""
+
+#: Orange.classification.LogisticRegressionLearner:22 of
+msgid "Read more in the :ref:`User Guide <logistic_regression>`."
+msgstr ""
+
+#: ../../source/reference/classification.rst:21
+msgid "Random Forest"
+msgstr ""
+
+#: Orange.classification.RandomForestLearner:2 of
+msgid ""
+"A wrapper for `sklearn.ensemble.forest.RandomForestClassifier`. The "
+"following is its documentation:"
+msgstr ""
+
+#: Orange.classification.RandomForestLearner:4 of
+msgid "A random forest classifier."
+msgstr ""
+
+#: Orange.classification.RandomForestLearner:6 of
+msgid ""
+"A random forest is a meta estimator that fits a number of decision tree "
+"classifiers on various sub-samples of the dataset and uses averaging to "
+"improve the predictive accuracy and control over-fitting. The sub-sample "
+"size is always the same as the original input sample size but the samples"
+" are drawn with replacement if `bootstrap=True` (default)."
+msgstr ""
+
+#: Orange.classification.RandomForestLearner:13 of
+msgid "Read more in the :ref:`User Guide <forest>`."
+msgstr ""
+
+#: ../../source/reference/classification.rst:31
+msgid "Simple Random Forest"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:2 of
+msgid ""
+"A random forest classifier, optimized for speed. Trees in the forest are "
+"constructed with :obj:`SimpleTreeLearner` classification trees."
+msgstr ""
+
+#: Orange.classification.NaiveBayesLearner
+#: Orange.classification.SimpleRandomForestLearner
+#: Orange.classification.SoftmaxRegressionLearner of
+msgid "Parameters"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:9 of
+msgid "**n_estimators**"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:8 of
+msgid "int, optional (default = 10)"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:9 of
+msgid "Number of trees in the forest."
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:14 of
+msgid "**min_instances**"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:13
+#: Orange.classification.SimpleTreeLearner:9 of
+msgid "int, optional (default = 2)"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:12
+#: Orange.classification.SimpleTreeLearner:8 of
+msgid ""
+"Minimal number of data instances in leaves. When growing the three, new "
+"nodes are not introduced if they would result in leaves with fewer "
+"instances than min_instances. Instance count is weighed."
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:17 of
+msgid "**max_depth**"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:16
+#: Orange.classification.SimpleTreeLearner:12 of
+msgid "int, optional (default = 1024)"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:17
+#: Orange.classification.SimpleTreeLearner:13 of
+msgid "Maximal depth of tree."
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:21 of
+msgid "**max_majority**"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:20
+#: Orange.classification.SimpleTreeLearner:16 of
+msgid "float, optional (default = 1.0)"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:20
+#: Orange.classification.SimpleTreeLearner:16 of
+msgid ""
+"Maximal proportion of majority class. When this is exceeded, induction "
+"stops (only used for classification)."
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:28 of
+msgid "**skip_prob**"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:27 of
+msgid "string, optional (default = \"sqrt\")"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:24
+#: Orange.classification.SimpleTreeLearner:20 of
+msgid "Data attribute will be skipped with probability ``skip_prob``."
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:26
+#: Orange.classification.SimpleTreeLearner:22 of
+msgid "if float, then skip attribute with this probability."
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:27
+#: Orange.classification.SimpleTreeLearner:23 of
+msgid "if \"sqrt\", then `skip_prob = 1 - sqrt(n_features) / n_features`"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:28
+#: Orange.classification.SimpleTreeLearner:24 of
+msgid "if \"log2\", then `skip_prob = 1 - log2(n_features) / n_features`"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:43 of
+msgid "**seed**"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:42
+#: Orange.classification.SimpleTreeLearner:42 of
+msgid "int, optional (default = 42)"
+msgstr ""
+
+#: Orange.classification.SimpleRandomForestLearner:31
+#: Orange.classification.SimpleTreeLearner:30 of
+msgid "Random seed."
+msgstr ""
+
+#: Orange.classification.MajorityLearner.fit_storage:2
+#: Orange.classification.NaiveBayesLearner.fit_storage:2
+#: Orange.classification.SimpleRandomForestLearner.fit_storage:2
+#: Orange.classification.SimpleTreeLearner.fit_storage:2
+#: Orange.classification.TreeLearner.fit_storage:2 of
+msgid ""
+"Default implementation of fit_storage defaults to calling fit. Derived "
+"classes must define fit_storage or fit"
+msgstr ""
+
+#: ../../source/reference/classification.rst:42
+msgid "Softmax Regression"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:2 of
+msgid ""
+"L2 regularized softmax regression classifier. Uses the L-BFGS algorithm "
+"to minimize the categorical cross entropy cost with L2 regularization. "
+"This model is suitable when dealing with a multi-class classification "
+"problem."
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:7 of
+msgid "When using this learner you should:"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:9 of
+msgid "choose a suitable regularization parameter lambda\\_,"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:10 of
+msgid ""
+"consider using many logistic regression models (one for each value of the"
+" class variable) instead of softmax regression."
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:18 of
+msgid "**lambda\\_**"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:17 of
+msgid "float, optional (default=1.0)"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:16 of
+msgid ""
+"Regularization parameter. It controls trade-off between fitting the data "
+"and keeping parameters small. Higher values of lambda\\_ force parameters"
+" to be smaller."
+msgstr ""
+
+#: Orange.classification.NaiveBayesLearner:22
+#: Orange.classification.SoftmaxRegressionLearner:28 of
+msgid "**preprocessors**"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:27 of
+msgid "list, optional"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:21 of
+msgid ""
+"Preprocessors are applied to data before training or testing. Default "
+"preprocessors: Defaults to `[RemoveNaNClasses(), RemoveNaNColumns(), "
+"Impute(), Continuize(), Normalize()]`"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:25 of
+msgid "remove columns with all values as NaN"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:26 of
+msgid "replace NaN values with suitable values"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:27 of
+msgid "continuize all discrete attributes,"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:28 of
+msgid "transform the dataset so that the columns are on a similar scale,"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:43 of
+msgid "**fmin_args**"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:42 of
+msgid "dict, optional"
+msgstr ""
+
+#: Orange.classification.SoftmaxRegressionLearner:31 of
+msgid "Parameters for L-BFGS algorithm."
+msgstr ""
+
+#: ../../source/reference/classification.rst:52
+msgid "k-Nearest Neighbors"
+msgstr ""
+
+#: Orange.classification.KNNLearner:2 of
+msgid ""
+"A wrapper for `sklearn.neighbors.classification.KNeighborsClassifier`. "
+"The following is its documentation:"
+msgstr ""
+
+#: Orange.classification.KNNLearner:4 of
+msgid "Classifier implementing the k-nearest neighbors vote."
+msgstr ""
+
+#: Orange.classification.KNNLearner:6 of
+msgid "Read more in the :ref:`User Guide <classification>`."
+msgstr ""
+
+#: ../../source/reference/classification.rst:61
+msgid "Naive Bayes"
+msgstr ""
+
+#: Orange.classification.NaiveBayesLearner:2 of
+msgid ""
+"Naive Bayes classifier. Works only with discrete attributes. By default, "
+"continuous attributes are discretized."
+msgstr ""
+
+#: Orange.classification.NaiveBayesLearner:21 of
+msgid "list, optional (default=\"[Orange.preprocess.Discretize]\")"
+msgstr ""
+
+#: Orange.classification.NaiveBayesLearner:9 of
+msgid ""
+"An ordered list of preprocessors applied to data before training or "
+"testing."
+msgstr ""
+
+#: ../../source/reference/classification.rst:65
+msgid ""
+"The following code loads lenses dataset (four discrete attributes and "
+"discrete class), constructs naive Bayesian learner, uses it on the entire"
+" dataset to construct a classifier, and then applies classifier to the "
+"first three data instances:"
+msgstr ""
+
+#: ../../source/reference/classification.rst:79
+msgid "For datasets that include continuous attributes,"
+msgstr ""
+
+#: ../../source/reference/classification.rst:88
+msgid "Support Vector Machines"
+msgstr ""
+
+#: Orange.classification.SVMLearner:2 of
+msgid ""
+"A wrapper for `sklearn.svm.classes.SVC`. The following is its "
+"documentation:"
+msgstr ""
+
+#: Orange.classification.SVMLearner:4 of
+msgid "C-Support Vector Classification."
+msgstr ""
+
+#: Orange.classification.SVMLearner:6 of
+msgid ""
+"The implementation is based on libsvm. The fit time complexity is more "
+"than quadratic with the number of samples which makes it hard to scale to"
+" dataset with more than a couple of 10000 samples."
+msgstr ""
+
+#: Orange.classification.SVMLearner:10 of
+msgid "The multiclass support is handled according to a one-vs-one scheme."
+msgstr ""
+
+#: Orange.classification.SVMLearner:12 of
+msgid ""
+"For details on the precise mathematical formulation of the provided "
+"kernel functions and how `gamma`, `coef0` and `degree` affect each other,"
+" see the corresponding section in the narrative documentation: "
+":ref:`svm_kernels`."
+msgstr ""
+
+#: Orange.classification.LinearSVMLearner:14
+#: Orange.classification.NuSVMLearner:11 Orange.classification.SVMLearner:17 of
+msgid "Read more in the :ref:`User Guide <svm_classification>`."
+msgstr ""
+
+#: ../../source/reference/classification.rst:97
+msgid "Linear Support Vector Machines"
+msgstr ""
+
+#: Orange.classification.LinearSVMLearner:2 of
+msgid ""
+"A wrapper for `sklearn.svm.classes.LinearSVC`. The following is its "
+"documentation:"
+msgstr ""
+
+#: Orange.classification.LinearSVMLearner:4 of
+msgid "Linear Support Vector Classification."
+msgstr ""
+
+#: Orange.classification.LinearSVMLearner:6 of
+msgid ""
+"Similar to SVC with parameter kernel='linear', but implemented in terms "
+"of liblinear rather than libsvm, so it has more flexibility in the choice"
+" of penalties and loss functions and should scale better to large numbers"
+" of samples."
+msgstr ""
+
+#: Orange.classification.LinearSVMLearner:11 of
+msgid ""
+"This class supports both dense and sparse input and the multiclass "
+"support is handled according to a one-vs-the-rest scheme."
+msgstr ""
+
+#: ../../source/reference/classification.rst:107
+msgid "Nu-Support Vector Machines"
+msgstr ""
+
+#: Orange.classification.NuSVMLearner:2 of
+msgid ""
+"A wrapper for `sklearn.svm.classes.NuSVC`. The following is its "
+"documentation:"
+msgstr ""
+
+#: Orange.classification.NuSVMLearner:4 of
+msgid "Nu-Support Vector Classification."
+msgstr ""
+
+#: Orange.classification.NuSVMLearner:6 of
+msgid ""
+"Similar to SVC but uses a parameter to control the number of support "
+"vectors."
+msgstr ""
+
+#: Orange.classification.NuSVMLearner:9
+#: Orange.classification.OneClassSVMLearner:8 of
+msgid "The implementation is based on libsvm."
+msgstr ""
+
+#: ../../source/reference/classification.rst:117
+msgid "One Class Support Vector Machines"
+msgstr ""
+
+#: Orange.classification.OneClassSVMLearner:2 of
+msgid ""
+"A wrapper for `sklearn.svm.classes.OneClassSVM`. The following is its "
+"documentation:"
+msgstr ""
+
+#: Orange.classification.OneClassSVMLearner:4 of
+msgid "Unsupervised Outlier Detection."
+msgstr ""
+
+#: Orange.classification.OneClassSVMLearner:6 of
+msgid "Estimate the support of a high-dimensional distribution."
+msgstr ""
+
+#: Orange.classification.EllipticEnvelopeLearner:6
+#: Orange.classification.OneClassSVMLearner:10 of
+msgid "Read more in the :ref:`User Guide <outlier_detection>`."
+msgstr ""
+
+#: ../../source/reference/classification.rst:128
+msgid "Classification Tree"
+msgstr ""
+
+#: ../../source/reference/classification.rst:130
+msgid ""
+"Orange includes three implemenations of classification trees. "
+"`TreeLearner` is home-grown and properly handles multinominal and missing"
+" values. The one from scikit-learn, `SklTreeLearner`, is faster. Another "
+"home-grown, `SimpleTreeLearner`, is simpler and stil faster."
+msgstr ""
+
+#: Orange.classification.TreeLearner:2 of
+msgid "Tree inducer with proper handling of nominal attributes and binarization."
+msgstr ""
+
+#: Orange.classification.TreeLearner:4 of
+msgid ""
+"The inducer can handle missing values of attributes and target. For "
+"discrete attributes with more than two possible values, each value can "
+"get a separate branch (`binarize=False`), or values can be grouped into "
+"two groups (`binarize=True`, default)."
+msgstr ""
+
+#: Orange.classification.TreeLearner:9 of
+msgid ""
+"The tree growth can be limited by the required number of instances for "
+"internal nodes and for leafs, the sufficient proportion of majority "
+"class, and by the maximal depth of the tree."
+msgstr ""
+
+#: Orange.classification.TreeLearner:13 of
+msgid "If the tree is not binary, it can contain zero-branches."
+msgstr ""
+
+#: Orange.classification.TreeLearner:32 of
+msgid "Args:"
+msgstr ""
+
+#: Orange.classification.TreeLearner:19 of
+msgid "binarize (bool):"
+msgstr ""
+
+#: Orange.classification.TreeLearner:17 of
+msgid ""
+"if `True` the inducer will find optimal split into two subsets for values"
+" of discrete attributes. If `False` (default), each value gets its "
+"branch."
+msgstr ""
+
+#: Orange.classification.TreeLearner:22 of
+msgid "min_samples_leaf (float):"
+msgstr ""
+
+#: Orange.classification.TreeLearner:22 of
+msgid "the minimal number of data instances in a leaf"
+msgstr ""
+
+#: Orange.classification.TreeLearner:26 of
+msgid "min_samples_split (float):"
+msgstr ""
+
+#: Orange.classification.TreeLearner:25 of
+msgid "the minimal nubmer of data instances that is split into subgroups"
+msgstr ""
+
+#: Orange.classification.TreeLearner:28 of
+msgid "max_depth (int): the maximal depth of the tree"
+msgstr ""
+
+#: Orange.classification.TreeLearner:32 of
+msgid "sufficient_majority (float):"
+msgstr ""
+
+#: Orange.classification.TreeLearner:31 of
+msgid "a majority at which the data is not split further"
+msgstr ""
+
+#: Orange.classification.TreeLearner:48
+#: Orange.classification.TreeLearner.build_tree:18 of
+msgid "Returns:"
+msgstr ""
+
+#: Orange.classification.TreeLearner:35 of
+msgid "instance of OrangeTreeModel"
+msgstr ""
+
+#: Orange.classification.TreeLearner.build_tree:2 of
+msgid "Induce a tree from the given data"
+msgstr ""
+
+#: Orange.classification.TreeLearner.build_tree:5 of
+msgid "root node (Node)"
+msgstr ""
+
+#: Orange.classification.SklTreeLearner:2 of
+msgid "Wrapper for SKL's tree inducer"
+msgstr ""
+
+#: ../../source/reference/classification.rst:145
+msgid "Simple Tree"
+msgstr ""
+
+#: Orange.classification.SimpleTreeLearner:2 of
+msgid ""
+"Classification or regression tree learner. Uses gain ratio for "
+"classification and mean square error for regression. This learner was "
+"developed to speed-up random forest construction, but can also be used as"
+" a standalone tree learner."
+msgstr ""
+
+#: Orange.classification.SimpleTreeLearner:10 of
+msgid "min_instances"
+msgstr ""
+
+#: Orange.classification.SimpleTreeLearner:13 of
+msgid "max_depth"
+msgstr ""
+
+#: Orange.classification.SimpleTreeLearner:17 of
+msgid "max_majority"
+msgstr ""
+
+#: Orange.classification.SimpleTreeLearner:24 of
+msgid "skip_prob"
+msgstr ""
+
+#: Orange.classification.SimpleTreeLearner:23 of
+msgid "string, optional (default = 0.0)"
+msgstr ""
+
+#: Orange.classification.SimpleTreeLearner:27 of
+msgid "bootstrap"
+msgstr ""
+
+#: Orange.classification.SimpleTreeLearner:26 of
+msgid "data table, optional (default = False)"
+msgstr ""
+
+#: Orange.classification.SimpleTreeLearner:27 of
+msgid "A bootstrap dataset."
+msgstr ""
+
+#: Orange.classification.SimpleTreeLearner:43 of
+msgid "seed"
+msgstr ""
+
+#: ../../source/reference/classification.rst:155
+msgid "Majority Classifier"
+msgstr ""
+
+#: Orange.classification.MajorityLearner:2 of
+msgid ""
+"A majority classifier. Always returns most frequent class from the "
+"training set, regardless of the attribute values from the test data "
+"instance. Returns class value distribution if class probabilities are "
+"requested. Can be used as a baseline when comparing classifiers."
+msgstr ""
+
+#: Orange.classification.MajorityLearner:7 of
+msgid ""
+"In the special case of uniform class distribution within the training "
+"data, class value is selected randomly. In order to produce consistent "
+"results on the same dataset, this value is selected based on hash of the "
+"class vector."
+msgstr ""
+
+#: ../../source/reference/classification.rst:165
+msgid "Elliptic Envelope"
+msgstr ""
+
+#: Orange.classification.EllipticEnvelopeLearner:2 of
+msgid ""
+"A wrapper for `sklearn.covariance.elliptic_envelope.EllipticEnvelope`. "
+"The following is its documentation:"
+msgstr ""
+
+#: Orange.classification.EllipticEnvelopeLearner:4 of
+msgid "An object for detecting outliers in a Gaussian distributed dataset."
+msgstr ""
+
+#: ../../source/reference/classification.rst:175
+msgid "Neural Network"
+msgstr ""
+
+#: Orange.classification.NNClassificationLearner:2 of
+msgid ""
+"A wrapper for "
+"`Orange.classification.neural_network.MLPClassifierWCallback`. The "
+"following is its documentation:"
+msgstr ""
+
+#: Orange.classification.NNClassificationLearner:4 of
+msgid "Multi-layer Perceptron classifier."
+msgstr ""
+
+#: Orange.classification.NNClassificationLearner:6 of
+msgid ""
+"This model optimizes the log-loss function using LBFGS or stochastic "
+"gradient descent."
+msgstr ""
+
+#: ../../source/reference/classification.rst:184
+msgid "CN2 Rule Induction"
+msgstr ""
+
+#: Orange.classification.rules:1 of
+msgid ""
+"Induction of rules works by finding a rule that covers some learning "
+"instances, removing these instances, and repeating this until all "
+"instances are covered. Rules are scored by heuristics such as impurity of"
+" class distribution of covered instances. The module includes common "
+"rule-learning algorithms, and allows for replacing rule search "
+"strategies, scoring and other components."
+msgstr ""
+
+#: Orange.classification.rules.CN2Learner:2 of
+msgid ""
+"Classic CN2 inducer that constructs a list of ordered rules. To evaluate "
+"found hypotheses, entropy measure is used. Returns a CN2Classifier if "
+"called with data."
+msgstr ""
+
+#: Orange.classification.rules.CN2Learner:17
+#: Orange.classification.rules.CN2SDLearner:31
+#: Orange.classification.rules.CN2SDUnorderedLearner:27
+#: Orange.classification.rules.CN2UnorderedLearner:23 of
+msgid "References"
+msgstr ""
+
+#: Orange.classification.rules.CN2Learner:18 of
+msgid ""
+"\"The CN2 Induction Algorithm\", Peter Clark and Tim Niblett, Machine "
+"Learning Journal, 3 (4), pp261-283, (1989)"
+msgstr ""
+
+#: Orange.classification.rules.CN2Learner:23 of
+msgid "[R8ea8bec4dff3-1]_"
+msgstr ""
+
+#: Orange.classification.rules.CN2UnorderedLearner:2 of
+msgid "Construct a set of unordered rules."
+msgstr ""
+
+#: Orange.classification.rules.CN2UnorderedLearner:4 of
+msgid ""
+"Rules are learnt for each class individually and scored by the relative "
+"frequency of the class corrected by the Laplace correction. After adding "
+"a rule, only the covered examples of that class are removed."
+msgstr ""
+
+#: Orange.classification.rules.CN2UnorderedLearner:8 of
+msgid ""
+"The code below loads the *iris* dataset (four continuous attributes and a"
+" discrete class) and fits the learner."
+msgstr ""
+
+#: Orange.classification.rules.CN2UnorderedLearner:24 of
+msgid ""
+"\"Rule Induction with CN2: Some Recent Improvements\", Peter Clark and "
+"Robin Boswell, Machine Learning - Proceedings of the 5th European "
+"Conference (EWSL-91), pp151-163, 1991"
+msgstr ""
+
+#: Orange.classification.rules.CN2UnorderedLearner:30 of
+msgid "[R5d8f3b79cb11-1]_"
+msgstr ""
+
+#: Orange.classification.rules.CN2SDLearner:2 of
+msgid ""
+"Ordered CN2SD inducer that constructs a list of ordered rules. To "
+"evaluate found hypotheses, Weighted relative accuracy measure is used. "
+"Returns a CN2SDClassifier if called with data."
+msgstr ""
+
+#: Orange.classification.rules.CN2SDLearner:6 of
+msgid ""
+"In this setting, ordered rule induction refers exclusively to finding "
+"best rule conditions and assigning the majority class in the rule head "
+"(target class is set to None). To later predict instances, rules will be "
+"regarded as unordered."
+msgstr ""
+
+#: Orange.classification.rules.CN2SDLearner:20
+#: Orange.classification.rules.CN2SDUnorderedLearner:16 of
+msgid "Notes"
+msgstr ""
+
+#: Orange.classification.rules.CN2SDLearner:21
+#: Orange.classification.rules.CN2SDUnorderedLearner:17 of
+msgid ""
+"A weighted covering algorithm is applied, in which subsequently induced "
+"rules also represent interesting and sufficiently large subgroups of the "
+"population. Covered positive examples are not deleted from the learning "
+"set, rather their weight is reduced."
+msgstr ""
+
+#: Orange.classification.rules.CN2SDLearner:26
+#: Orange.classification.rules.CN2SDUnorderedLearner:22 of
+msgid ""
+"The algorithm demonstrates how classification rule learning (predictive "
+"induction) can be adapted to subgroup discovery, a task at the "
+"intersection of predictive and descriptive induction."
+msgstr ""
+
+#: Orange.classification.rules.CN2SDLearner:32
+#: Orange.classification.rules.CN2SDUnorderedLearner:28 of
+msgid ""
+"\"Subgroup Discovery with CN2-SD\", Nada Lavrač et al., Journal of "
+"Machine Learning Research 5 (2004), 153-188, 2004"
+msgstr ""
+
+#: Orange.classification.rules.CN2SDLearner:37 of
+msgid "[Rba03197cb963-1]_"
+msgstr ""
+
+#: Orange.classification.rules.CN2SDUnorderedLearner:2 of
+msgid ""
+"Unordered CN2SD inducer that constructs a set of unordered rules. To "
+"evaluate found hypotheses, Weighted relative accuracy measure is used. "
+"Returns a CN2SDUnorderedClassifier if called with data."
+msgstr ""
+
+#: Orange.classification.rules.CN2SDUnorderedLearner:33 of
+msgid "[Ref813acdf1cd-1]_"
+msgstr ""
+

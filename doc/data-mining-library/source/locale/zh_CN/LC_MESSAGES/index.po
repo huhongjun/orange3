@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/index.rst:2
+msgid "Orange Data Mining Library"
+msgstr "Orange数据挖掘库"
+
+#: ../../source/index.rst:5
+msgid "Tutorial"
+msgstr "入门"
+
+#: ../../source/index.rst:7
+msgid ""
+"This is a gentle introduction on scripting in `Orange "
+"<http://orange.biolab.si>`_ , a Python 3 data mining library. We here "
+"assume you have already downloaded and installed Orange from its `github "
+"repository <https://github.com/biolab/orange3>`_ and have a working "
+"version of Python. In the command line or any Python environment, try to "
+"import Orange. Below, we used a Python shell::"
+msgstr ""
+"这是一个Orange变成的简单介绍。"
+"<http://orange.biolab.si>`_ , 一个Python 3 数据挖掘库。我们 "
+"假设你已经下载和安装Orange，从`github "
+"repository <https://github.com/biolab/orange3>`_ 并且有一个 "
+"Python工作版本。 在命令行或任何Python交互环境，尝试 "
+"import Orange 。 下面，我们使用Python脚本::"
+
+#: ../../source/index.rst:15
+msgid ""
+"If this leaves no error and warning, Orange and Python are properly "
+"installed and you are ready to continue with the Tutorial."
+msgstr ""
+
+#: ../../source/index.rst:29
+msgid "Reference"
+msgstr "参考"
+
+#: ../../source/index.rst:31
+msgid "Available classes and methods."
+msgstr "可用类与方法"
+

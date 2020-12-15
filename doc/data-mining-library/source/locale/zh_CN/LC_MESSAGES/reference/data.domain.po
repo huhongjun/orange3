@@ -1,0 +1,262 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/data.domain.rst:5
+msgid "Domain description (``domain``)"
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:7
+msgid ""
+"Description of a domain stores a list of features, class(es) and meta "
+"attribute descriptors. A domain descriptor is attached to all tables in "
+"Orange to assign names and types to the corresponding columns. Columns in"
+" the :obj:`Orange.data.Table` have the roles of attributes (features, "
+"independent variables), class(es) (targets, outcomes, dependent "
+"variables) and meta attributes; in parallel to that, the domain "
+"descriptor stores their corresponding descriptions in collections of "
+"variable descriptors of type :obj:`Orange.data.Variable`."
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:17
+msgid ""
+"Domain descriptors are also stored in predictive models and other objects"
+" to facilitate automated conversions between domains, as described below."
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:20
+msgid ""
+"Domains are most often constructed automatically when loading the data or"
+" wrapping the numpy arrays into Orange's :obj:`~Orange.data.Table`. ::"
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:32
+msgid ""
+"A tuple of descriptors (instances of :class:`Orange.data.Variable`) for "
+"attributes (features, independent variables). ::"
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:41
+msgid "Class variable if the domain has a single class; `None` otherwise. ::"
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:48
+msgid ""
+"A tuple of descriptors for class attributes (outcomes, dependent "
+"variables). ::"
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:56
+msgid ""
+"A list of attributes and class attributes (the concatenation of the "
+"above). ::"
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:66
+msgid "List of meta attributes."
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:70
+msgid ""
+"`True` if the domain was constructed when converting numpy array to "
+":class:`Orange.data.Table`. Such domains can be converted to and from "
+"other domains even if they consist of different variable descriptors for "
+"as long as their number and types match."
+msgstr ""
+
+#: Orange.data.Domain.__init__:2 of
+msgid ""
+"Initialize a new domain descriptor. Arguments give the features and the "
+"class attribute(s). They can be described by descriptors (instances of "
+":class:`Variable`), or by indices or names if the source domain is given."
+msgstr ""
+
+#: ../../source/reference/data.domain.rst
+msgid "Parameters"
+msgstr ""
+
+#: Orange.data.Domain.__init__:7 of
+msgid "a list of attributes"
+msgstr ""
+
+#: Orange.data.Domain.__init__:9 of
+msgid "target variable or a list of target variables"
+msgstr ""
+
+#: Orange.data.Domain.__init__:11 of
+msgid "a list of meta attributes"
+msgstr ""
+
+#: Orange.data.Domain.__init__:13 of
+msgid "the source domain for attributes"
+msgstr ""
+
+#: ../../source/reference/data.domain.rst
+msgid "Returns"
+msgstr ""
+
+#: Orange.data.Domain.__init__:15 Orange.data.Domain.from_numpy:17 of
+msgid "a new domain"
+msgstr ""
+
+#: ../../source/reference/data.domain.rst
+msgid "Return type"
+msgstr ""
+
+#: Orange.data.Domain.__init__:16 Orange.data.Domain.from_numpy:18 of
+msgid ":class:`Domain`"
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:77
+msgid ""
+"The following script constructs a domain with a discrete feature *gender*"
+" and continuous feature *age*, and a continuous target *salary*. ::"
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:88
+msgid ""
+"This constructs a new domain with some features from the Iris dataset and"
+" a new feature *color*. ::"
+msgstr ""
+
+#: Orange.data.Domain.from_numpy:2 of
+msgid ""
+"Create a domain corresponding to the given numpy arrays. This method is "
+"usually invoked from :meth:`Orange.data.Table.from_numpy`."
+msgstr ""
+
+#: Orange.data.Domain.from_numpy:5 of
+msgid ""
+"All attributes are assumed to be continuous and are named \"Feature "
+"<n>\". Target variables are discrete if the only two values are 0 and 1; "
+"otherwise they are continuous. Discrete targets are named \"Class <n>\" "
+"and continuous are named \"Target <n>\". Domain is marked as "
+":attr:`anonymous`, so data from any other domain of the same shape can be"
+" converted into this one and vice-versa."
+msgstr ""
+
+#: Orange.data.Domain.from_numpy:12 of
+msgid "2-dimensional array with data"
+msgstr ""
+
+#: Orange.data.Domain.from_numpy:13 of
+msgid "1- of 2- dimensional data for target"
+msgstr ""
+
+#: Orange.data.Domain.from_numpy:15 of
+msgid "meta attributes"
+msgstr ""
+
+#: Orange.data.Domain.__getitem__:2 of
+msgid ""
+"Return a variable descriptor from the given argument, which can be a "
+"descriptor, index or name. If `var` is a descriptor, the function returns"
+" this same object."
+msgstr ""
+
+#: Orange.data.Domain.__getitem__:6 of
+msgid "index, name or descriptor"
+msgstr ""
+
+#: Orange.data.Domain.__getitem__:8 of
+msgid "an instance of :class:`Variable` described by `var`"
+msgstr ""
+
+#: Orange.data.Domain.__getitem__:9 of
+msgid ":class:`Variable`"
+msgstr ""
+
+#: Orange.data.Domain.__len__:2 of
+msgid "The number of variables (features and class attributes)."
+msgstr ""
+
+#: Orange.data.Domain.__contains__:2 of
+msgid ""
+"Return `True` if the item (`str`, `int`, :class:`Variable`) is in the "
+"domain."
+msgstr ""
+
+#: Orange.data.Domain.index:2 of
+msgid ""
+"Return the index of the given variable or meta attribute, represented "
+"with an instance of :class:`Variable`, `int` or `str`."
+msgstr ""
+
+#: Orange.data.Domain.has_discrete_attributes:2 of
+msgid ""
+"Return `True` if domain has any discrete attributes. If `include_class` "
+"is set, the check includes the class attribute(s). If `include_metas` is "
+"set, the check includes the meta attributes."
+msgstr ""
+
+#: Orange.data.Domain.has_continuous_attributes:2 of
+msgid ""
+"Return `True` if domain has any continuous attributes. If `include_class`"
+" is set, the check includes the class attribute(s). If `include_metas` is"
+" set, the check includes the meta attributes."
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:153
+msgid "Domain conversion"
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:155
+msgid "Domain descriptors also convert data instances between different domains."
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:157
+msgid ""
+"In a typical scenario, we may want to discretize some continuous data "
+"before inducing a model. Discretizers (:mod:`Orange.preprocess`) "
+"construct a new data table with attribute descriptors "
+"(:class:`Orange.data.variable`), that include the corresponding functions"
+" for conversion from continuous to discrete values. The trained model "
+"stores this domain descriptor and uses it to convert instances from the "
+"original domain to the discretized one at prediction phase."
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:165
+msgid "In general, instances are converted between domains as follows."
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:167
+msgid ""
+"If the target attribute appears in the source domain, the value is "
+"copied; two attributes are considered the same if they have the same "
+"descriptor."
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:170
+msgid ""
+"If the target attribute descriptor defines a function for value "
+"transformation, the value is transformed."
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:172
+msgid "Otherwise, the value is marked as missing."
+msgstr ""
+
+#: ../../source/reference/data.domain.rst:174
+msgid ""
+"An exception to this rule are domains in which the anonymous flag is set."
+" When the source or the target domain is anonymous, they match if they "
+"have the same number of variables and types. In this case, the data is "
+"copied without considering the attribute descriptors."
+msgstr ""
+

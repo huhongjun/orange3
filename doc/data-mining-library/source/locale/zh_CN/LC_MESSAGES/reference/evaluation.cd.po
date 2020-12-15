@@ -1,0 +1,406 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/evaluation.cd.rst:5
+msgid "Scoring methods (``scoring``)"
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:8
+msgid "CA"
+msgstr ""
+
+#: Orange.evaluation.CA:2 of
+msgid ""
+"A wrapper for `sklearn.metrics.classification.accuracy_score`. The "
+"following is its documentation:"
+msgstr ""
+
+#: Orange.evaluation.CA:4 of
+msgid "Accuracy classification score."
+msgstr ""
+
+#: Orange.evaluation.CA:6 of
+msgid ""
+"In multilabel classification, this function computes subset accuracy: the"
+" set of labels predicted for a sample must *exactly* match the "
+"corresponding set of labels in y_true."
+msgstr ""
+
+#: Orange.evaluation.CA:10 of
+msgid "Read more in the :ref:`User Guide <accuracy_score>`."
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:15
+msgid "Precision"
+msgstr ""
+
+#: Orange.evaluation.Precision:2 of
+msgid ""
+"A wrapper for `sklearn.metrics.classification.precision_score`. The "
+"following is its documentation:"
+msgstr ""
+
+#: Orange.evaluation.Precision:4 of
+msgid "Compute the precision"
+msgstr ""
+
+#: Orange.evaluation.Precision:6 Orange.evaluation.PrecisionRecallFSupport:6 of
+msgid ""
+"The precision is the ratio ``tp / (tp + fp)`` where ``tp`` is the number "
+"of true positives and ``fp`` the number of false positives. The precision"
+" is intuitively the ability of the classifier not to label as positive a "
+"sample that is negative."
+msgstr ""
+
+#: Orange.evaluation.Precision:11 Orange.evaluation.Recall:10 of
+msgid "The best value is 1 and the worst value is 0."
+msgstr ""
+
+#: Orange.evaluation.F1:17 Orange.evaluation.Precision:13
+#: Orange.evaluation.PrecisionRecallFSupport:28 Orange.evaluation.Recall:12 of
+msgid "Read more in the :ref:`User Guide <precision_recall_f_measure_metrics>`."
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:22
+msgid "Recall"
+msgstr ""
+
+#: Orange.evaluation.Recall:2 of
+msgid ""
+"A wrapper for `sklearn.metrics.classification.recall_score`. The "
+"following is its documentation:"
+msgstr ""
+
+#: Orange.evaluation.Recall:4 of
+msgid "Compute the recall"
+msgstr ""
+
+#: Orange.evaluation.PrecisionRecallFSupport:11 Orange.evaluation.Recall:6 of
+msgid ""
+"The recall is the ratio ``tp / (tp + fn)`` where ``tp`` is the number of "
+"true positives and ``fn`` the number of false negatives. The recall is "
+"intuitively the ability of the classifier to find all the positive "
+"samples."
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:29
+msgid "F1"
+msgstr ""
+
+#: Orange.evaluation.F1:2 of
+msgid ""
+"A wrapper for `sklearn.metrics.classification.f1_score`. The following is"
+" its documentation:"
+msgstr ""
+
+#: Orange.evaluation.F1:4 of
+msgid "Compute the F1 score, also known as balanced F-score or F-measure"
+msgstr ""
+
+#: Orange.evaluation.F1:6 of
+msgid ""
+"The F1 score can be interpreted as a weighted average of the precision "
+"and recall, where an F1 score reaches its best value at 1 and worst score"
+" at 0. The relative contribution of precision and recall to the F1 score "
+"are equal. The formula for the F1 score is::"
+msgstr ""
+
+#: Orange.evaluation.F1:13 of
+msgid ""
+"In the multi-class and multi-label case, this is the average of the F1 "
+"score of each class with weighting depending on the ``average`` "
+"parameter."
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:36
+msgid "PrecisionRecallFSupport"
+msgstr ""
+
+#: Orange.evaluation.PrecisionRecallFSupport:2 of
+msgid ""
+"A wrapper for "
+"`sklearn.metrics.classification.precision_recall_fscore_support`. The "
+"following is its documentation:"
+msgstr ""
+
+#: Orange.evaluation.PrecisionRecallFSupport:4 of
+msgid "Compute precision, recall, F-measure and support for each class"
+msgstr ""
+
+#: Orange.evaluation.PrecisionRecallFSupport:15 of
+msgid ""
+"The F-beta score can be interpreted as a weighted harmonic mean of the "
+"precision and recall, where an F-beta score reaches its best value at 1 "
+"and worst score at 0."
+msgstr ""
+
+#: Orange.evaluation.PrecisionRecallFSupport:19 of
+msgid ""
+"The F-beta score weights recall more than precision by a factor of "
+"``beta``. ``beta == 1.0`` means recall and precision are equally "
+"important."
+msgstr ""
+
+#: Orange.evaluation.PrecisionRecallFSupport:22 of
+msgid "The support is the number of occurrences of each class in ``y_true``."
+msgstr ""
+
+#: Orange.evaluation.PrecisionRecallFSupport:24 of
+msgid ""
+"If ``pos_label is None`` and in binary classification, this function "
+"returns the average precision, recall and F-measure if ``average`` is one"
+" of ``'micro'``, ``'macro'``, ``'weighted'`` or ``'samples'``."
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:43
+msgid "AUC"
+msgstr ""
+
+#: Orange.evaluation.AUC:2 Orange.evaluation.LogLoss:2 of
+msgid "${sklpar}"
+msgstr ""
+
+#: Orange.evaluation.AUC Orange.evaluation.LogLoss of
+msgid "Parameters"
+msgstr ""
+
+#: Orange.evaluation.AUC:8 Orange.evaluation.LogLoss:8 of
+msgid "**results**"
+msgstr ""
+
+#: Orange.evaluation.AUC:7 Orange.evaluation.LogLoss:7 of
+msgid "Orange.evaluation.Results"
+msgstr ""
+
+#: Orange.evaluation.AUC:8 Orange.evaluation.LogLoss:8 of
+msgid "Stored predictions and actual data in model testing."
+msgstr ""
+
+#: Orange.evaluation.AUC:23 of
+msgid "**target**"
+msgstr ""
+
+#: Orange.evaluation.AUC:22 of
+msgid "int, optional (default=None)"
+msgstr ""
+
+#: Orange.evaluation.AUC:11 of
+msgid "Value of class to report."
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:50
+msgid "Log Loss"
+msgstr ""
+
+#: Orange.evaluation.LogLoss:12 of
+msgid "**eps**"
+msgstr ""
+
+#: Orange.evaluation.LogLoss:11 of
+msgid "float"
+msgstr ""
+
+#: Orange.evaluation.LogLoss:11 of
+msgid ""
+"Log loss is undefined for p=0 or p=1, so probabilities are clipped to "
+"max(eps, min(1 - eps, p))."
+msgstr ""
+
+#: Orange.evaluation.LogLoss:16 of
+msgid "**normalize**"
+msgstr ""
+
+#: Orange.evaluation.LogLoss:15 of
+msgid "bool, optional (default=True)"
+msgstr ""
+
+#: Orange.evaluation.LogLoss:15 of
+msgid ""
+"If true, return the mean loss per sample. Otherwise, return the sum of "
+"the per-sample losses."
+msgstr ""
+
+#: Orange.evaluation.LogLoss:28 of
+msgid "**sample_weight**"
+msgstr ""
+
+#: Orange.evaluation.LogLoss:27 of
+msgid "array-like of shape = [n_samples], optional"
+msgstr ""
+
+#: Orange.evaluation.LogLoss:19 of
+msgid "Sample weights."
+msgstr ""
+
+#: Orange.evaluation.LogLoss:31 of
+msgid "Examples"
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:57
+msgid "MSE"
+msgstr ""
+
+#: Orange.evaluation.MSE:2 of
+msgid ""
+"A wrapper for `sklearn.metrics.regression.mean_squared_error`. The "
+"following is its documentation:"
+msgstr ""
+
+#: Orange.evaluation.MSE:4 of
+msgid "Mean squared error regression loss"
+msgstr ""
+
+#: Orange.evaluation.MSE:6 of
+msgid "Read more in the :ref:`User Guide <mean_squared_error>`."
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:64
+msgid "MAE"
+msgstr ""
+
+#: Orange.evaluation.MAE:2 of
+msgid ""
+"A wrapper for `sklearn.metrics.regression.mean_absolute_error`. The "
+"following is its documentation:"
+msgstr ""
+
+#: Orange.evaluation.MAE:4 of
+msgid "Mean absolute error regression loss"
+msgstr ""
+
+#: Orange.evaluation.MAE:6 of
+msgid "Read more in the :ref:`User Guide <mean_absolute_error>`."
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:71
+msgid "R2"
+msgstr ""
+
+#: Orange.evaluation.R2:2 of
+msgid ""
+"A wrapper for `sklearn.metrics.regression.r2_score`. The following is its"
+" documentation:"
+msgstr ""
+
+#: Orange.evaluation.R2:4 of
+msgid "R^2 (coefficient of determination) regression score function."
+msgstr ""
+
+#: Orange.evaluation.R2:6 of
+msgid ""
+"Best possible score is 1.0 and it can be negative (because the model can "
+"be arbitrarily worse). A constant model that always predicts the expected"
+" value of y, disregarding the input features, would get a R^2 score of "
+"0.0."
+msgstr ""
+
+#: Orange.evaluation.R2:11 of
+msgid "Read more in the :ref:`User Guide <r2_score>`."
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:78
+msgid "CD diagram"
+msgstr ""
+
+#: Orange.evaluation.compute_CD:2 of
+msgid ""
+"Returns critical difference for Nemenyi or Bonferroni-Dunn test according"
+" to given alpha (either alpha=\"0.05\" or alpha=\"0.1\") for average "
+"ranks and number of tested datasets N. Test can be either \"nemenyi\" for"
+" for Nemenyi two tailed test or \"bonferroni-dunn\" for Bonferroni-Dunn "
+"test."
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:2 of
+msgid ""
+"Draws a CD graph, which is used to display  the differences in methods' "
+"performance. See Janez Demsar, Statistical Comparisons of Classifiers "
+"over Multiple Data Sets, 7(Jan):1--30, 2006."
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:6 of
+msgid "Needs matplotlib to work."
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:8 of
+msgid ""
+"The image is ploted on `plt` imported using `import matplotlib.pyplot as "
+"plt`."
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:39 of
+msgid "Args:"
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:12 of
+msgid ""
+"avranks (list of float): average ranks of methods. names (list of str): "
+"names of methods. cd (float): Critical difference used for statistically "
+"significance of"
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:15 of
+msgid "difference between methods."
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:16 of
+msgid "cdmethod (int, optional): the method that is compared with other methods"
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:17 of
+msgid "If omitted, show pairwise comparison of methods"
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:18 of
+msgid ""
+"lowv (int, optional): the lowest shown rank highv (int, optional): the "
+"highest shown rank width (int, optional): default width in inches "
+"(default: 6) textspace (int, optional): space on figure sides (in inches)"
+" for the"
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:22 of
+msgid "method names (default: 1)"
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:23 of
+msgid "reverse (bool, optional):  if set to `True`, the lowest rank is on the"
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:24 of
+msgid "right (default: `False`)"
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:39 of
+msgid "filename (str, optional): output file name (with extension). If not"
+msgstr ""
+
+#: Orange.evaluation.graph_ranks:26 of
+msgid "given, the function does not write a file."
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:86
+msgid "Example"
+msgstr ""
+
+#: ../../source/reference/evaluation.cd.rst:96
+msgid "The code produces the following graph:"
+msgstr ""
+

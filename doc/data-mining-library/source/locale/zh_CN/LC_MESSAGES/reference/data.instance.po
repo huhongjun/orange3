@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/data.instance.rst:5
+msgid "Data Instance (``instance``)"
+msgstr ""
+
+#: ../../source/reference/data.instance.rst:7
+msgid ""
+"Class :obj:`Instance` represents a data instance, typically retrieved "
+"from a :obj:`Orange.data.Table` or :obj:`Orange.data.sql.SqlTable`. The "
+"base class contains a copy of the data; modifying does not change the "
+"data in the storage from which the instance was retrieved. Derived "
+"classes (e.g. :obj:`Orange.data.table.RowInstance`) can represent views "
+"into various data storages, therefore changing them actually changes the "
+"data."
+msgstr ""
+
+#: ../../source/reference/data.instance.rst:14
+msgid ""
+"Like data tables, every data instance is associated with a domain and its"
+" data is split into attributes, classes, meta attributes and the weight. "
+"Its constructor thus requires a domain and, optionally, data. For the "
+"following example, we borrow the domain from the Iris dataset. ::"
+msgstr ""
+
+#: ../../source/reference/data.instance.rst:28
+msgid ""
+"The instance's data can be retrieved through attributes :obj:`x`, "
+":obj:`y` and :obj:`metas`. ::"
+msgstr ""
+
+#: ../../source/reference/data.instance.rst:38
+msgid ""
+"Other utility functions provide for easier access to the instances data. "
+"::"
+msgstr ""
+
+#: ../../source/reference/data.instance.rst:53
+msgid ""
+"Constructor requires a domain and the data as numpy array, an existing "
+"instance from the same or another domain or any Python iterable."
+msgstr ""
+
+#: ../../source/reference/data.instance.rst:56
+msgid "Domain can be omitted it the data is given as an existing data instances."
+msgstr ""
+
+#: ../../source/reference/data.instance.rst:58
+msgid "When the instance is not from the given domain, Orange converts it."
+msgstr ""
+
+#: Orange.data.Instance.domain:2 of
+msgid "The domain describing the instance's values."
+msgstr ""
+
+#: Orange.data.Instance.x:2 of
+msgid ""
+"Instance's attributes as a 1-dimensional numpy array whose length equals "
+"`len(self.domain.attributes)`."
+msgstr ""
+
+#: Orange.data.Instance.y:2 of
+msgid ""
+"Instance's classes as a 1-dimensional numpy array whose length equals "
+"`len(self.domain.attributes)`."
+msgstr ""
+
+#: Orange.data.Instance.metas:2 of
+msgid ""
+"Instance's meta attributes as a 1-dimensional numpy array whose length "
+"equals `len(self.domain.attributes)`."
+msgstr ""
+
+#: Orange.data.Instance.list:2 of
+msgid ""
+"All instance's values, including attributes, classes and meta attributes,"
+" as a list whose length equals `len(self.domain.attributes) + "
+"len(self.domain.class_vars) + len(self.domain.metas)`."
+msgstr ""
+
+#: Orange.data.Instance.weight:2 Orange.data.RowInstance.weight:2 of
+msgid "The weight of the data instance. Default is 1."
+msgstr ""
+
+#: Orange.data.Instance.attributes:2 of
+msgid "Return iterator over the instance's attributes"
+msgstr ""
+
+#: Orange.data.Instance.classes:2 of
+msgid "Return iterator over the instance's class attributes"
+msgstr ""
+
+#: Orange.data.Instance.get_class:2 of
+msgid ""
+"Return the class value as an instance of :obj:`Orange.data.Value`. Throws"
+" an exception if there are multiple classes."
+msgstr ""
+
+#: Orange.data.Instance.get_classes:2 of
+msgid "Return the class value as a list of instances of :obj:`Orange.data.Value`."
+msgstr ""
+
+#: Orange.data.Instance.set_class:2 Orange.data.RowInstance.set_class:2 of
+msgid ""
+"Set the instance's class. Throws an exception if there are multiple "
+"classes."
+msgstr ""
+
+#: ../../source/reference/data.instance.rst:68
+msgid "Rows of Data Tables"
+msgstr ""
+
+#: ../../source/reference/data.instance.rst:73
+msgid ""
+"`RowInstance` is a specialization of :obj:`~Orange.data.Instance` that "
+"represents a row of :obj:`Orange.data.Table`. `RowInstance` is returned "
+"by indexing a `Table`."
+msgstr ""
+
+#: ../../source/reference/data.instance.rst:77
+msgid ""
+"The difference between `Instance` and `RowInstance` is that the latter "
+"represents a view into the table: changing the `RowInstance` changes the "
+"data in the table::"
+msgstr ""
+
+#: ../../source/reference/data.instance.rst:88
+msgid ""
+"Dense tables can also be modified directly through :obj:`x`, :obj:`y` and"
+" :obj:`metas`. ::"
+msgstr ""
+
+#: ../../source/reference/data.instance.rst:95
+msgid "Sparse tables cannot be changed in this way."
+msgstr ""
+

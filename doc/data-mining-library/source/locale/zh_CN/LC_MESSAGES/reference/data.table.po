@@ -1,0 +1,347 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Orange Data Mining
+# This file is distributed under the same license as the Orange Data Mining
+# Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Data Mining Library 3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-29 15:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/data.table.rst:5
+msgid "Data Table (``table``)"
+msgstr ""
+
+#: ../../source/reference/data.table.rst:10
+msgid ""
+"Stores data instances as a set of 2d tables representing the independent "
+"variables (attributes, features) and dependent variables (classes, "
+"targets), and the corresponding weights and meta attributes."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:14
+msgid ""
+"The data is stored in 2d numpy arrays :obj:`X`, :obj:`Y`, :obj:`W`, "
+":obj:`metas`. The arrays may be dense or sparse. All arrays have the same"
+" number of rows. If certain data is missing, the corresponding array has "
+"zero columns."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:19
+msgid ""
+"Arrays can be of any type; default is `float` (that is, double "
+"precision). Values of discrete variables are stored as whole numbers. "
+"Arrays for meta attributes usually contain instances of `object`."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:23
+msgid ""
+"The table also stores the associated information about the variables as "
+"an instance of :obj:`Domain`. The number of columns must match the "
+"corresponding number of variables in the description."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:27
+msgid "There are multiple ways to get values or entire rows of the table."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:29
+msgid ""
+"The index can be an int, e.g. `table[7]`; the corresponding row is "
+"returned as an instance of :obj:`RowInstance`."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:32
+msgid ""
+"The index can be a slice or a sequence of ints (e.g. `table[7:10]` or "
+"`table[[7, 42, 15]]`, indexing returns a new data table with the selected"
+" rows."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:36
+msgid ""
+"If there are two indices, where the first is an int (a row number) and "
+"the second can be interpreted as columns, e.g. `table[3, 5]` or `table[3,"
+" 'gender']` or `table[3, y]` (where `y` is an instance of "
+":obj:`~Orange.data.Variable`), a single value is returned as an instance "
+"of :obj:`~Orange.data.Value`."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:42
+msgid ""
+"In all other cases, the first index should be a row index, a slice or a "
+"sequence, and the second index, which represent a set of columns, should "
+"be an int, a slice, a sequence or a numpy array. The result is a new "
+"table with a new domain."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:47
+msgid "Rules for setting the data are as follows."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:49
+msgid ""
+"If there is a single index (an `int`, `slice`, or a sequence of row "
+"indices) and the value being set is a single scalar, all attributes (not "
+"including the classes) are set to that value. That is, `table[r] = v` is "
+"equivalent to `table.X[r] = v`."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:54
+msgid ""
+"If there is a single index and the value is a data instance "
+"(:obj:`Orange.data.Instance`), it is converted into the table's domain "
+"and set to the corresponding rows."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:58
+msgid ""
+"Final option for a single index is that the value is a sequence whose "
+"length equals the number of attributes and target variables. The "
+"corresponding rows are set; meta attributes are set to unknowns."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:66
+msgid "For two indices, the row can again be given as a single `int`, a"
+msgstr ""
+
+#: ../../source/reference/data.table.rst:63
+msgid ""
+"`slice` or a sequence of indices. Column indices can be a single `int`, "
+"`str` or :obj:`Orange.data.Variable`, a sequence of them, a `slice` or "
+"any iterable. The value can be a single value, or a sequence of "
+"appropriate length."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:70
+msgid ""
+"Description of the variables corresponding to the table's columns. The "
+"domain is used for determining the variable types, printing the data in "
+"human-readable form, conversions between data tables and similar."
+msgstr ""
+
+#: Orange.data.Table.columns:2 of
+msgid ""
+"A class whose attributes contain attribute descriptors for columns. For a"
+" table `table`, setting `c = table.columns` will allow accessing the "
+"table's variables with, for instance `c.gender`, `c.age` ets. Spaces are "
+"replaced with underscores."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:76
+msgid "Constructors"
+msgstr ""
+
+#: ../../source/reference/data.table.rst:78
+msgid "The preferred way to construct a table is to invoke a named constructor."
+msgstr ""
+
+#: Orange.data.Table.from_domain:2 of
+msgid ""
+"Construct a new `Table` with the given number of rows for the given "
+"domain. The optional vector of weights is initialized to 1's."
+msgstr ""
+
+#: Orange.data.Table.append Orange.data.Table.extend
+#: Orange.data.Table.from_domain Orange.data.Table.from_file
+#: Orange.data.Table.from_numpy Orange.data.Table.from_table
+#: Orange.data.Table.from_table_rows Orange.data.Table.insert of
+msgid "Parameters"
+msgstr ""
+
+#: Orange.data.Table.from_domain:5 of
+msgid "domain for the `Table`"
+msgstr ""
+
+#: Orange.data.Table.from_domain:7 of
+msgid "number of rows in the new table"
+msgstr ""
+
+#: Orange.data.Table.from_domain:9 of
+msgid "indicates whether to construct a vector of weights"
+msgstr ""
+
+#: Orange.data.Table.from_domain Orange.data.Table.from_file
+#: Orange.data.Table.from_numpy Orange.data.Table.from_table
+#: Orange.data.Table.from_table_rows of
+msgid "Returns"
+msgstr ""
+
+#: Orange.data.Table.from_domain:11 Orange.data.Table.from_table:15
+#: Orange.data.Table.from_table_rows:8 of
+msgid "a new table"
+msgstr ""
+
+#: Orange.data.Table.from_domain Orange.data.Table.from_file
+#: Orange.data.Table.from_table Orange.data.Table.from_table_rows of
+msgid "Return type"
+msgstr ""
+
+#: Orange.data.Table.from_table:2 of
+msgid ""
+"Create a new table from selected columns and/or rows of an existing one. "
+"The columns are chosen using a domain. The domain may also include "
+"variables that do not appear in the source table; they are computed from "
+"source variables if possible."
+msgstr ""
+
+#: Orange.data.Table.from_table:7 of
+msgid "The resulting data may be a view or a copy of the existing data."
+msgstr ""
+
+#: Orange.data.Table.from_numpy:7 Orange.data.Table.from_table:9 of
+msgid "the domain for the new table"
+msgstr ""
+
+#: Orange.data.Table.from_table:11 of
+msgid "the source table"
+msgstr ""
+
+#: Orange.data.Table.from_table:13 Orange.data.Table.from_table_rows:6 of
+msgid "indices of the rows to include"
+msgstr ""
+
+#: Orange.data.Table.from_table_rows:2 of
+msgid "Construct a new table by selecting rows from the source table."
+msgstr ""
+
+#: Orange.data.Table.from_table_rows:4 of
+msgid "an existing table"
+msgstr ""
+
+#: Orange.data.Table.from_numpy:2 of
+msgid ""
+"Construct a table from numpy arrays with the given domain. The number of "
+"variables in the domain must match the number of columns in the "
+"corresponding arrays. All arrays must have the same number of rows. "
+"Arrays may be of different numpy types, and may be dense or sparse."
+msgstr ""
+
+#: Orange.data.Table.from_numpy:9 of
+msgid "array with attribute values"
+msgstr ""
+
+#: Orange.data.Table.from_numpy:11 of
+msgid "array with class values"
+msgstr ""
+
+#: Orange.data.Table.from_numpy:13 of
+msgid "array with meta attributes"
+msgstr ""
+
+#: Orange.data.Table.from_numpy:15 of
+msgid "array with weights"
+msgstr ""
+
+#: Orange.data.Table.from_file:2 of
+msgid "Read a data table from a file. The path can be absolute or relative."
+msgstr ""
+
+#: Orange.data.Table.from_file:4 of
+msgid "File name"
+msgstr ""
+
+#: Orange.data.Table.from_file:6 of
+msgid "Sheet in a file (optional)"
+msgstr ""
+
+#: Orange.data.Table.from_file:8 of
+msgid "a new data table"
+msgstr ""
+
+#: ../../source/reference/data.table.rst:87
+msgid "Inspection"
+msgstr ""
+
+#: Orange.data.Table.is_view:2 of
+msgid "Return `True` if all arrays represent a view referring to another table"
+msgstr ""
+
+#: Orange.data.Table.is_copy:2 of
+msgid "Return `True` if the table owns its data"
+msgstr ""
+
+#: Orange.data.Table.ensure_copy:2 of
+msgid "Ensure that the table owns its data; copy arrays when necessary."
+msgstr ""
+
+#: Orange.data.Table.has_missing:2 of
+msgid "Return `True` if there are any missing attribute or class values."
+msgstr ""
+
+#: Orange.data.Table.has_missing_class:2 of
+msgid "Return `True` if there are any missing class values."
+msgstr ""
+
+#: Orange.data.Table.checksum:2 of
+msgid "Return a checksum over X, Y, metas and W."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:97
+msgid "Row manipulation"
+msgstr ""
+
+#: Orange.data.Table.append:2 of
+msgid "Append a data instance to the table."
+msgstr ""
+
+#: Orange.data.Table.append:4 Orange.data.Table.insert:6 of
+msgid "a data instance"
+msgstr ""
+
+#: Orange.data.Table.extend:2 of
+msgid ""
+"Extend the table with the given instances. The instances can be given as "
+"a table of the same or a different domain, or a sequence. In the latter "
+"case, each instances can be given as :obj:`~Orange.data.Instance` or a "
+"sequence of values (e.g. list, tuple, numpy.array)."
+msgstr ""
+
+#: Orange.data.Table.extend:8 of
+msgid "additional instances"
+msgstr ""
+
+#: Orange.data.Table.insert:2 of
+msgid "Insert a data instance into the table."
+msgstr ""
+
+#: Orange.data.Table.insert:4 of
+msgid "row index"
+msgstr ""
+
+#: Orange.data.Table.clear:2 of
+msgid "Remove all rows from the table."
+msgstr ""
+
+#: Orange.data.Table.shuffle:2 of
+msgid "Randomly shuffle the rows of the table."
+msgstr ""
+
+#: ../../source/reference/data.table.rst:106
+msgid "Weights"
+msgstr ""
+
+#: Orange.data.Table.has_weights:2 of
+msgid "Return `True` if the data instances are weighed."
+msgstr ""
+
+#: Orange.data.Table.set_weights:2 of
+msgid "Set weights of data instances; create a vector of weights if necessary."
+msgstr ""
+
+#: Orange.data.Table.total_weight:2 of
+msgid ""
+"Return the total weight of instances in the table, or their number if "
+"they are unweighted."
+msgstr ""
+
